@@ -15,8 +15,8 @@
 }
 
 .icon-alert-svg {
-    height: var(--spacing-6);
-    width: var(--spacing-6);
+    height: var(--spacing-4);
+    width: var(--spacing-4);
     -webkit-mask-image: url('/assets/svg/alert.svg');
     mask-image: url('/assets/svg/alert.svg');
     -webkit-mask-size: contain;

@@ -106,6 +106,16 @@
         
     </div>
 
+    <div class="copy-box">
+        <p class="copy-text" id="text">
+            Remplacer la personne présente sur l’image par un élève,
+            conserver la perspective et l’éclairage,
+            ajouter une incohérence légère dans les proportions des mains,
+            garder un rendu réaliste.
+        </p>
+        <button onclick="copyText()" class="copy-button"><div class="copy-logo" id="copy-logo"></div> <div class="copy-logo check" id="check"></div></button>
+    </div>
+
     <form action="https://formspree.io/f/mbdeleeb" method="POST" class="form" novalidate>
     <p>Tout les champs sont obligatoires.</p>
 
@@ -141,10 +151,11 @@
         <a href="/template.html" class="btn-link">< Template</a>
         <a href="/font.html" class="btn-link disabled" aria-disabled="true">Font ></a>
     </div>
-    
+
 </body>
 <script src="scripts/theme-toggle.js"></script>
 <script src="scripts/error-message.js"></script>
+<script src="scripts/copy.js"></script>
 <footer>
         <a href="" class="logo-link"><img src="/assets/svg/logoMetfordTigers.svg" alt="lien_accueil"></a>
         <p>Alibi - Atelier pédagogique</p>
