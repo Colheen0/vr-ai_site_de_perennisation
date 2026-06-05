@@ -118,7 +118,6 @@
         <input type="email" id="email" name="email" placeholder=" " aria-invalid="false" autocomplete="email" required>
         <span>Email</span>
     </label>
-    <p id="errors" aria-live="assertive" class="error-summary"></p>
 
     <label for="subject">
         <input type="text" id="subject" name="subject" placeholder=" " required>
@@ -129,6 +128,11 @@
         <textarea id="message" name="message" placeholder=" " required></textarea>
         <span>Message</span>
     </label>
+
+    <div id="errors" role="alert" aria-live="assertive" class="form-feedback">
+        <div class="icon-alert-svg"></div>
+        <span class="feedback-text"></span>
+    </div>
 
     <button class="btn general-sans-semibold " type="submit">Envoyer</button>
 </form> 
