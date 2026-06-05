@@ -3,30 +3,42 @@
 @import "alert.css";
 @import "input.css";
 @import "form.css";
-@import "variables.css";
+@import "header.css";
+@import "layout.css";
 
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
+.mobile-only {
+    display: none;
 }
 
-html,
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+}
+
+html {
+    background-color: var(--bg-default);
+}
+
 body {
-    background-color: var(--color-bg);
-    font-family: square-serif, sans-serif;
+    background-color: transparent;
+    font-family: var(--font-body);
+    color: var(--text-primary);
+    padding: 0;
     margin: 0;
-    padding: 0.625rem 0.625rem 0 0.625rem;
-    min-height: 100%;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
 }
 
-footer {
-    border-top: 0.125rem solid var(--border-default);
-    margin-top: var(--spacing-4);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.625rem;
-    gap: var(--spacing-12);
+[hidden] {
+    display: none !important;
+}
+
+[data-theme="dark"] .invert-on-dark {
+    filter: invert(1);
 }
