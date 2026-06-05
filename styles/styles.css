@@ -3,42 +3,30 @@
 @import "alert.css";
 @import "input.css";
 @import "form.css";
-@import "header.css";
-@import "layout.css";
+@import "variables.css";
 
-.mobile-only {
-    display: none;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-@media (max-width: 768px) {
-    .desktop-only {
-        display: none;
-    }
-
-    .mobile-only {
-        display: block;
-    }
-}
-
-html {
-    background-color: var(--bg-default);
-}
-
+html,
 body {
-    background-color: transparent;
-    font-family: var(--font-body);
-    color: var(--text-primary);
-    padding: 0;
+    background-color: var(--color-bg);
+    font-family: square-serif, sans-serif;
     margin: 0;
-    position: relative;
-    overflow: hidden;
-    height: 100vh;
+    padding: 0.625rem 0.625rem 0 0.625rem;
+    min-height: 100%;
 }
 
-[hidden] {
-    display: none !important;
-}
-
-[data-theme="dark"] .invert-on-dark {
-    filter: invert(1);
+footer {
+    border-top: 0.125rem solid var(--border-default);
+    margin-top: var(--spacing-4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.625rem;
+    gap: var(--spacing-12);
 }
