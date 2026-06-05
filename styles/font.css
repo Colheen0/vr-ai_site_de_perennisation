@@ -1,44 +1,14 @@
 @import url(https://db.onlinewebfonts.com/c/0d2e0589d03cfc34ae25f7e045ec3a8f?family=SquareSerif-Demi);
-@import url(https://db.onlinewebfonts.com/c/fb69990708893276bdb20a98eb2e06d3?family=General+Sans+Semibold);
-@import url(https://db.onlinewebfonts.com/c/25c8b884ca555f338df57a70ee6d539c?family=General+Sans+Medium);
-@import url(https://db.onlinewebfonts.com/c/7887c87ae42c25319906eb657546f4b4?family=General+Sans+Extralight);
 
-@font-face {
+@font-face{
     font-family: "SquareSerif-Demi";
     src: url("https://db.onlinewebfonts.com/t/0d2e0589d03cfc34ae25f7e045ec3a8f.eot");
     src: url("https://db.onlinewebfonts.com/t/0d2e0589d03cfc34ae25f7e045ec3a8f.eot?#iefix")format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/0d2e0589d03cfc34ae25f7e045ec3a8f.woff2")format("woff2"),
-    url("https://db.onlinewebfonts.com/t/0d2e0589d03cfc34ae25f7e045ec3a8f.woff")format("woff"),
-    url("https://db.onlinewebfonts.com/t/0d2e0589d03cfc34ae25f7e045ec3a8f.ttf")format("truetype"),
-    url("https://db.onlinewebfonts.com/t/0d2e0589d03cfc34ae25f7e045ec3a8f.svg#SquareSerif-Demi")format("svg");
-}
-
-@font-face {
-    font-family: "General Sans Semibold";
-    src: url("https://db.onlinewebfonts.com/t/fb69990708893276bdb20a98eb2e06d3.eot");
-    src: url("https://db.onlinewebfonts.com/t/fb69990708893276bdb20a98eb2e06d3.eot?#iefix")format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/fb69990708893276bdb20a98eb2e06d3.woff2")format("woff2"),
-    url("https://db.onlinewebfonts.com/t/fb69990708893276bdb20a98eb2e06d3.woff")format("woff"),
-    url("https://db.onlinewebfonts.com/t/fb69990708893276bdb20a98eb2e06d3.ttf")format("truetype"),
-    url("https://db.onlinewebfonts.com/t/fb69990708893276bdb20a98eb2e06d3.svg#General Sans Semibold")format("svg");
-}
-
-@font-face {
-    font-family: "General Sans Medium";
-    src: url("https://db.onlinewebfonts.com/t/25c8b884ca555f338df57a70ee6d539c.eot");
-    src: url("https://db.onlinewebfonts.com/t/25c8b884ca555f338df57a70ee6d539c.eot?#iefix")format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/25c8b884ca555f338df57a70ee6d539c.woff2")format("woff2"),
-    url("https://db.onlinewebfonts.com/t/25c8b884ca555f338df57a70ee6d539c.woff")format("woff"),
-    url("https://db.onlinewebfonts.com/t/25c8b884ca555f338df57a70ee6d539c.ttf")format("truetype"),
-    url("https://db.onlinewebfonts.com/t/25c8b884ca555f338df57a70ee6d539c.svg#General Sans Medium")format("svg");
-}
-
-@font-face {
-    font-family: "General Sans Extralight";
-    src: url("https://db.onlinewebfonts.com/t/7887c87ae42c25319906eb657546f4b4.eot");
-    src: url("https://db.onlinewebfonts.com/t/7887c87ae42c25319906eb657546f4b4.eot?#iefix")format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/7887c87ae42c25319906eb657546f4b4.woff2")format("woff2"),
-    url("https://db.onlinewebfonts.com/t/7887c87ae42c25319906eb657546f4b4.woff")format("woff"),
-    url("https://db.onlinewebfonts.com/t/7887c87ae42c25319906eb657546f4b4.ttf")format("truetype"),
-    url("https://db.onlinewebfonts.com/t/7887c87ae42c25319906eb657546f4b4.svg#General Sans Extralight")format("svg");
+        url("https://db.onlinewebfonts.com/t/0d2e0589d03cfc34ae25f7e045ec3a8f.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/0d2e0589d03cfc34ae25f7e045ec3a8f.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/0d2e0589d03cfc34ae25f7e045ec3a8f.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/0d2e0589d03cfc34ae25f7e045ec3a8f.svg#SquareSerif-Demi")format("svg");
+    font-weight:normal;
+    font-style:normal;
+    font-display:swap;
 }

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts</title>
+    <link rel="stylesheet" href="styles/styles.css">
+<link href="https://db.onlinewebfonts.com/c/0d2e0589d03cfc34ae25f7e045ec3a8f?family=SquareSerif-Demi" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/fb69990708893276bdb20a98eb2e06d3?family=General+Sans+Semibold" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/25c8b884ca555f338df57a70ee6d539c?family=General+Sans+Medium" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/7887c87ae42c25319906eb657546f4b4?family=General+Sans+Extralight" rel="stylesheet">
+    <style>
+        body {
+            padding: 3rem;
+            font-family: var(--font-body);
+            color: var(--text-primary);
+            background-color: var(--bg-default);
+        }
+
+        .font-section {
+            margin-bottom: 3rem;
+        }
+
+        .font-label {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .font-divider {
+            border: none;
+            border-top: 1px solid var(--border-default);
+            margin-bottom: 1.5rem;
+        }
+
+        .squareserif {
+            font-family: "SquareSerif-Demi", serif;
+        }
+
+        .general-sans-extralight {
+            font-family: "General Sans Extralight", sans-serif;
+        }
+
+        .general-sans-medium {
+            font-family: "General Sans Medium", sans-serif;
+        }
+
+        .general-sans-semibold {
+            font-family: "General Sans Semibold", sans-serif;
+        }
+
+        .specimen-xl  { font-size: 3rem;    line-height: 1.1; }
+        .specimen-lg  { font-size: 2rem;    line-height: 1.2; }
+        .specimen-md  { font-size: 1.25rem; line-height: 1.4; }
+        .specimen-sm  { font-size: 1rem;    line-height: 1.5; }
+        .specimen-xs  { font-size: 0.875rem; line-height: 1.5; }
+
+        .row {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .size-label {
+            font-family: "General Sans Medium", sans-serif;
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            min-width: 3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="font-section">
+        <p class="font-label">SquareSerif-Demi — Heading</p>
+        <hr class="font-divider">
+        <div class="row">
+            <span class="size-label">3rem</span>
+            <span class="squareserif specimen-xl">Le renard brun saute par-dessus le chien</span>
+        </div>
+        <div class="row">
+            <span class="size-label">2rem</span>
+            <span class="squareserif specimen-lg">Le renard brun saute par-dessus le chien</span>
+        </div>
+        <div class="row">
+            <span class="size-label">1.25rem</span>
+            <span class="squareserif specimen-md">Le renard brun saute par-dessus le chien paresseux</span>
+        </div>
+        <div class="row">
+            <span class="size-label">1rem</span>
+            <span class="squareserif specimen-sm">Le renard brun saute par-dessus le chien paresseux</span>
+        </div>
+    </div>
+
+    <div class="font-section">
+        <p class="font-label">General Sans Extralight — Body</p>
+        <hr class="font-divider">
+        <div class="row">
+            <span class="size-label">2rem</span>
+            <span class="general-sans-extralight specimen-lg">Le renard brun saute par-dessus le chien</span>
+        </div>
+        <div class="row">
+            <span class="size-label">1.25rem</span>
+            <span class="general-sans-extralight specimen-md">Le renard brun saute par-dessus le chien paresseux</span>
+        </div>
+        <div class="row">
+            <span class="size-label">1rem</span>
+            <span class="general-sans-extralight specimen-sm">Le renard brun saute par-dessus le chien paresseux. Portez ce vieux whisky au juge blond qui fume.</span>
+        </div>
+        <div class="row">
+            <span class="size-label">0.875rem</span>
+            <span class="general-sans-extralight specimen-xs">Le renard brun saute par-dessus le chien paresseux. Portez ce vieux whisky au juge blond qui fume.</span>
+        </div>
+    </div>
+
+    <div class="font-section">
+        <p class="font-label">General Sans Medium — Body</p>
+        <hr class="font-divider">
+        <div class="row">
+            <span class="size-label">2rem</span>
+            <span class="general-sans-medium specimen-lg">Le renard brun saute par-dessus le chien</span>
+        </div>
+        <div class="row">
+            <span class="size-label">1.25rem</span>
+            <span class="general-sans-medium specimen-md">Le renard brun saute par-dessus le chien paresseux</span>
+        </div>
+        <div class="row">
+            <span class="size-label">1rem</span>
+            <span class="general-sans-medium specimen-sm">Le renard brun saute par-dessus le chien paresseux. Portez ce vieux whisky au juge blond qui fume.</span>
+        </div>
+        <div class="row">
+            <span class="size-label">0.875rem</span>
+            <span class="general-sans-medium specimen-xs">Le renard brun saute par-dessus le chien paresseux. Portez ce vieux whisky au juge blond qui fume.</span>
+        </div>
+    </div>
+
+    <div class="font-section">
+        <p class="font-label">General Sans Semibold — Body</p>
+        <hr class="font-divider">
+        <div class="row">
+            <span class="size-label">2rem</span>
+            <span class="general-sans-semibold specimen-lg">Le renard brun saute par-dessus le chien</span>
+        </div>
+        <div class="row">
+            <span class="size-label">1.25rem</span>
+            <span class="general-sans-semibold specimen-md">Le renard brun saute par-dessus le chien paresseux</span>
+        </div>
+        <div class="row">
+            <span class="size-label">1rem</span>
+            <span class="general-sans-semibold specimen-sm">Le renard brun saute par-dessus le chien paresseux. Portez ce vieux whisky au juge blond qui fume.</span>
+        </div>
+        <div class="row">
+            <span class="size-label">0.875rem</span>
+            <span class="general-sans-semibold specimen-xs">Le renard brun saute par-dessus le chien paresseux. Portez ce vieux whisky au juge blond qui fume.</span>
+        </div>
+    </div>
+
+    <script src="scripts/theme-toggle.js"></script>
+</body>
+</html>

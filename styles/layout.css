@@ -1,0 +1,39 @@
+main {
+    display: flex;
+    justify-content: center;
+    height: calc(100vh - 90.5px);
+    overflow: hidden;
+}
+
+.nav {
+    width: 20%;
+    border-right: 1px solid var(--border-default);
+    padding-left: var(--spacing-8);
+}
+
+.content {
+    width: 55%;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.content::-webkit-scrollbar {
+    width: 4px;
+}
+
+.content::-webkit-scrollbar-track {
+    background: none;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 0;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color-hover);
+}
+
+.toc {
+    width: 25%;
+}
