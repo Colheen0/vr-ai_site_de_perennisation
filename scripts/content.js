@@ -58,10 +58,17 @@ function renderToc(toc) {
 
 function setupTocScroll() {
     const contentEl = document.querySelector('.content');
-    const headings = Array.from(document.querySelectorAll('.content h1, .content h2, .content h3'));
+    const headings = Array.from(document.querySelectorAll('.content h1, .content h2, .content h3'))
+        .filter(h => h.id);
     const tocLinks = Array.from(document.querySelectorAll('.toc-link'));
 
     if (!contentEl || headings.length === 0 || tocLinks.length === 0) return;
+
+    const idToLink = {};
+    tocLinks.forEach(link => {
+        const id = link.getAttribute('href')?.slice(1);
+        if (id) idToLink[id] = link;
+    });
 
     const headerHeight = document.querySelector('header')?.offsetHeight ?? 0;
 
@@ -74,7 +81,7 @@ function setupTocScroll() {
                 const targetTop = target.getBoundingClientRect().top
                     - contentEl.getBoundingClientRect().top
                     + contentEl.scrollTop
-                    - headerHeight;
+                    - 30;
                 contentEl.scrollTo({ top: targetTop, behavior: 'smooth' });
             }
         });
@@ -82,18 +89,17 @@ function setupTocScroll() {
 
     contentEl.addEventListener('scroll', () => {
         const contentTop = contentEl.getBoundingClientRect().top;
-        const threshold = contentTop + headerHeight + 1;
+        let activeLink = tocLinks[0];
 
-        let current = 0;
-
-        headings.forEach((heading, i) => {
-            if (heading.getBoundingClientRect().top <= threshold) {
-                current = i;
+        headings.forEach(heading => {
+            const headingTop = heading.getBoundingClientRect().top - contentTop - 30;
+            if (headingTop <= 1 && idToLink[heading.id]) {
+                activeLink = idToLink[heading.id];
             }
         });
 
         tocLinks.forEach(link => link.classList.remove('active'));
-        tocLinks[current]?.classList.add('active');
+        activeLink?.classList.add('active');
     });
 }
 

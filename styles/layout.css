@@ -32,11 +32,14 @@ main {
 
     &::-webkit-scrollbar-track {
         background: none;
+        margin: 5px;
     }
 
     &::-webkit-scrollbar-thumb {
         background: var(--primary-color);
-        border-radius: 0;
+        border-radius: 2px;
+        margin-right: 10px;
+        margin-left: 10px;
     }
 
     &::-webkit-scrollbar-thumb:hover {
@@ -94,11 +97,14 @@ main {
 
 .content::-webkit-scrollbar-track {
     background: none;
+    margin: 5px;
 }
 
 .content::-webkit-scrollbar-thumb {
     background: var(--primary-color);
-    border-radius: 0;
+    border-radius: 2px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .content::-webkit-scrollbar-thumb:hover {
@@ -133,11 +139,12 @@ main {
 }
 
 .toc-link {
-        display: block;
+    display: block;
     color: var(--text-primary);
     text-decoration: none;
     font-size: 1rem;
     border-right: 2px solid transparent;
+    padding-left: var(--spacing-3);
     transition: color 0.15s, border-color 0.15s;
     white-space: nowrap;
     overflow: hidden;
