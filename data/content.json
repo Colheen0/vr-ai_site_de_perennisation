@@ -1,0 +1,257 @@
+{
+    "nav": {
+        "links": [
+            {
+                "label": "Vue d'ensemble",
+                "href": "vue-densemble.html",
+                "pageId": "vue-densemble"
+            }
+        ],
+        "groups": [
+            {
+                "title": "Présentation",
+                "links": [
+                    {
+                        "label": "À propos d'Alibi",
+                        "href": "a-propos.html",
+                        "pageId": "a-propos"
+                    },
+                    {
+                        "label": "Objectifs pédagogiques",
+                        "href": "objectifs.html",
+                        "pageId": "objectifs"
+                    }
+                ]
+            },
+            {
+                "title": "L'atelier",
+                "links": [
+                    {
+                        "label": "Synopsis",
+                        "href": "synopsis.html",
+                        "pageId": "synopsis"
+                    },
+                    {
+                        "label": "Mécaniques de jeu",
+                        "href": "mecaniques.html",
+                        "pageId": "mecaniques"
+                    }
+                ]
+            },
+            {
+                "title": "Préparation",
+                "links": [
+                    {
+                        "label": "Icebreaker",
+                        "href": "icebreaker.html",
+                        "pageId": "icebreaker"
+                    },
+                    {
+                        "label": "Matériel",
+                        "href": "materiel.html",
+                        "pageId": "materiel"
+                    }
+                ]
+            },
+            {
+                "title": "Guide d'animation",
+                "links": [
+                    {
+                        "label": "Lancement",
+                        "href": "lancement.html",
+                        "pageId": "lancement"
+                    },
+                    {
+                        "label": "Enquête (phase 1)",
+                        "href": "enquete-1.html",
+                        "pageId": "enquete-1"
+                    },
+                    {
+                        "label": "Résolution (phase 2)",
+                        "href": "resolution.html",
+                        "pageId": "resolution"
+                    },
+                    {
+                        "label": "Débrief",
+                        "href": "debrief.html",
+                        "pageId": "debrief"
+                    }
+                ]
+            },
+            {
+                "title": "Personnalisation",
+                "links": [
+                    {
+                        "label": "Créer ses preuves",
+                        "href": "creer-preuves.html",
+                        "pageId": "creer-preuves"
+                    },
+                    {
+                        "label": "Adapter l'atelier",
+                        "href": "adapter.html",
+                        "pageId": "adapter"
+                    }
+                ]
+            }
+        ]
+    },
+    "pages": {
+        "synopsis": {
+            "title": "Synopsis",
+            "toc": [
+                {
+                    "label": "Une situation qui paraît évidente",
+                    "href": "#situation"
+                },
+                {
+                    "label": "Le rôle des élèves",
+                    "href": "#role"
+                },
+                {
+                    "label": "Une enquête en collaboration",
+                    "href": "#enquete"
+                },
+                {
+                    "label": "Douter des évidences",
+                    "href": "#douter"
+                },
+                {
+                    "label": "Le moment de bascule",
+                    "href": "#bascule"
+                },
+                {
+                    "label": "La vérité derrière l'image",
+                    "href": "#verite"
+                },
+                {
+                    "label": "Une enquête qui change le regard",
+                    "href": "#regard"
+                }
+            ],
+            "content": [
+                {
+                    "type": "h1",
+                    "text": "Synopsis"
+                },
+                {
+                    "type": "h2",
+                    "id": "situation",
+                    "text": "Une situation qui paraît évidente"
+                },
+                {
+                    "type": "p",
+                    "text": "Les élèves sont plongés dans une affaire criminelle qui semble résolue dès le départ. Tout accuse un suspect évident — mais les apparences sont trompeuses."
+                },
+                {
+                    "type": "p",
+                    "text": "Dès les premières minutes, les indices semblent pointer dans une seule direction. Le coupable paraît désigné, l'affaire semble pliée. Pourtant, c'est précisément ce sentiment de certitude immédiate qui constitue le cœur du piège pédagogique tendu aux participants."
+                },
+                {
+                    "type": "p",
+                    "text": "Cette mécanique d'évidence construite repose sur un arsenal de biais bien documentés : le biais de confirmation, qui pousse à ne retenir que les éléments qui valident notre première impression ; le biais de saillance, qui accorde plus de poids aux informations frappantes ou émotionnellement chargées ; et l'effet de cadrage, qui oriente l'interprétation selon la manière dont les faits sont présentés. En réunissant ces trois leviers dans une même mise en scène, l'atelier crée une illusion de clarté qui s'avère, au fil de l'enquête, de plus en plus fragile."
+                },
+                {
+                    "type": "h2",
+                    "id": "role",
+                    "text": "Le rôle des élèves"
+                },
+                {
+                    "type": "p",
+                    "text": "En tant qu'enquêteurs, les élèves doivent analyser les preuves, interroger les témoins et reconstituer la chronologie des événements. Leur mission ne consiste pas seulement à identifier un coupable, mais à comprendre comment la vérité peut être masquée par des récits incomplets ou orientés."
+                },
+                {
+                    "type": "alertInfo",
+                    "variant": "info",
+                    "text": "Conseil animateur : ne révélez pas le retournement vous-même. Laissez les élèves le découvrir en repassant sur leurs propres indices. L'effet n'en sera que plus fort."
+                },
+                {
+                    "type": "h2",
+                    "id": "enquete",
+                    "text": "Une enquête en collaboration"
+                },
+                {
+                    "type": "p",
+                    "text": "Le travail d'équipe est au cœur de l'atelier. Chaque groupe dispose d'indices différents et doit coopérer pour obtenir une vue d'ensemble. Aucun groupe ne peut résoudre l'affaire seul — c'est la mise en commun des perspectives qui permet de faire émerger la vérité."
+                },
+                {
+                    "type": "p",
+                    "text": "Cette structure collaborative n'est pas anodine. Elle reproduit fidèlement la réalité du travail journalistique et de l'investigation collective : la vérité se construit rarement de manière solitaire. Elle est le produit d'échanges, de confrontations, de recoupements. En vivant cette expérience de l'intérieur, les élèves comprennent pourquoi la diversité des sources et des points de vue est une condition essentielle à toute démarche d'information rigoureuse."
+                },
+                {
+                    "type": "p",
+                    "text": "Sur le plan pédagogique, la collaboration force également à expliciter son raisonnement. Convaincre ses coéquipiers d'une hypothèse oblige à la formuler clairement, à en évaluer la solidité, à anticiper les objections. C'est un entraînement à la pensée critique autant qu'à la communication argumentée."
+                },
+                {
+                    "type": "p",
+                    "text": "Des variantes du dispositif permettent d'ajuster le niveau de difficulté collaborative : en réduisant le nombre d'échanges autorisés entre groupes, en introduisant des indices contradictoires, ou en attribuant des rôles asymétriques (un groupe dispose de preuves matérielles, un autre de témoignages, un troisième d'un accès aux antécédents des suspects). Chaque configuration génère des dynamiques différentes et peut être choisie en fonction des objectifs spécifiques de la séance."
+                },
+                {
+                    "type": "alertInfo",
+                    "variant": "info",
+                    "text": "Conseil animateur : ne révélez pas le retournement vous-même. Laissez les élèves le découvrir en repassant sur leurs propres indices. L'effet n'en sera que plus fort."
+                },
+                {
+                    "type": "h2",
+                    "id": "douter",
+                    "text": "Douter des évidences"
+                },
+                {
+                    "type": "p",
+                    "text": "L'atelier entraîne les élèves à ne pas se fier aux premières impressions et à remettre en question les informations reçues."
+                },
+                {
+                    "type": "p",
+                    "text": "Douter n'est pas une posture naturelle. Cognitivement, notre cerveau est câblé pour réduire l'incertitude au plus vite : face à une situation ambiguë, il cherche rapidement un récit cohérent, quitte à ignorer les éléments qui ne cadrent pas. Ce mécanisme, utile dans de nombreuses situations de la vie quotidienne, devient un obstacle dès qu'il s'agit d'évaluer une information de manière rigoureuse."
+                },
+                {
+                    "type": "h2",
+                    "id": "bascule",
+                    "text": "Le moment de bascule"
+                },
+                {
+                    "type": "p",
+                    "text": "Un retournement de situation vient bouleverser les certitudes des élèves et les pousse à reconsidérer l'ensemble de leur enquête. Ce moment est soigneusement scénarisé pour produire un effet de surprise maximum tout en restant parfaitement logique a posteriori — tous les indices nécessaires étaient là dès le début."
+                },
+                {
+                    "type": "p",
+                    "text": "Le choc cognitif provoqué par ce retournement est central dans le dispositif. Il ne s'agit pas d'un simple coup de théâtre narratif : c'est un outil pédagogique à part entière. En faisant vivre aux élèves le moment précis où leur certitude s'effondre, l'atelier leur offre une expérience incarnée de ce que signifie « avoir tort avec conviction ». Cette sensation est difficile à oublier, et c'est précisément pour cela qu'elle est efficace."
+                },
+                {
+                    "type": "p",
+                    "text": "Pour l'animateur, ce moment requiert une attention particulière. Il faut laisser le temps à la surprise de s'installer, ne pas enchaîner trop vite sur l'explication, et inviter les élèves à verbaliser ce qu'ils ressentent avant de passer à l'analyse. La dimension émotionnelle n'est pas un obstacle à l'apprentissage : elle en est le vecteur."
+                },
+                {
+                    "type": "alertInfo",
+                    "variant": "error",
+                    "text": "Conseil animateur : ne révélez pas le retournement vous-même. Laissez les élèves le découvrir en repassant sur leurs propres indices. L'effet n'en sera que plus fort."
+                },
+                {
+                    "type": "h2",
+                    "id": "verite",
+                    "text": "La vérité derrière l'image"
+                },
+                {
+                    "type": "p",
+                    "text": "La résolution révèle comment les biais cognitifs et les informations partielles peuvent mener à de fausses conclusions. Chaque preuve est réexaminée à la lumière du retournement, et les élèves constatent que rien n'était faux — mais que tout était incomplet."
+                },
+                {
+                    "type": "p",
+                    "text": "Ce moment de résolution est aussi l'occasion d'introduire des concepts clés de l'éducation aux médias : la différence entre un fait et son interprétation, la notion de contexte comme condition de compréhension, et le rôle actif du lecteur ou du spectateur dans la construction du sens. L'image — qu'elle soit photographique, vidéo ou textuelle — ne parle jamais d'elle-même : c'est toujours quelqu'un qui la cadre, la sélectionne, la publie, et quelqu'un d'autre qui la reçoit avec ses propres filtres."
+                },
+                {
+                    "type": "h2",
+                    "id": "regard",
+                    "text": "Une enquête qui change le regard"
+                },
+                {
+                    "type": "p",
+                    "text": "Au-delà du jeu, l'atelier invite les participants à développer un regard critique sur les médias et les récits qui leur sont présentés."
+                },
+                {
+                    "type": "p",
+                    "text": "L'objectif final n'est pas de rendre les élèves méfiants ou cyniques, mais de leur donner les outils pour naviguer avec lucidité dans un environnement informationnel complexe. Savoir douter, vérifier, recouper, contextualiser : ces compétences ne s'acquièrent pas par la théorie seule. Elles se construisent par la pratique, par l'erreur, par la prise de conscience. C'est exactement ce que propose cet atelier."
+                }
+            ]
+        }
+    }
+}
