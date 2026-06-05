@@ -1,0 +1,250 @@
+.highlights {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    z-index: -1;
+
+    .highlight-left {
+        display: block;
+    }
+
+    .highlight-middle {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .highlight-right {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+.header-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90.5px;
+    background-color: var(--bg-default);
+    z-index: -2;
+    pointer-events: none;
+}
+
+header {
+    display: flex;
+    padding: var(--spacing-6) var(--spacing-12);
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-default);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+
+    .logo {
+        display: flex;
+        width: 100px;
+        margin-left: 3px;
+    }
+
+    .search-wrapper {
+        position: relative;
+        width: 450px;
+    }
+
+    .search-bar {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-1);
+        background-color: var(--bg-subtle);
+        border: 1px solid var(--border-default);
+        corner-shape: squircle;
+        border-radius: var(--radius-xl);
+        padding: var(--spacing-2) var(--spacing-2);
+        color: var(--text-secondary);
+        width: 100%;
+        box-sizing: border-box;
+        transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .search-bar:has(input:focus) {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 1px var(--primary-color);
+    }
+
+    .search-wrapper:has(.search-results:not([hidden])) .search-bar {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .search-bar input::-webkit-search-cancel-button {
+        -webkit-appearance: none;
+        cursor: pointer;
+        height: 13px;
+        width: 13px;
+        background-image: url("/assets/svg/iconCancelSearch.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    [data-theme="dark"] .search-bar input::-webkit-search-cancel-button {
+        filter: invert(1);
+    }
+
+    .search-bar img {
+        width: .85rem;
+        height: .85rem;
+        flex-shrink: 0;
+    }
+
+    .search-bar input {
+        flex: 1;
+        border: none;
+        outline: none;
+        background: transparent;
+        color: var(--text-primary);
+        font-size: 1rem;
+        font-family: var(--font-body);
+    }
+
+    .search-bar input::placeholder {
+        color: var(--text-secondary);
+    }
+
+    .search-shortcuts {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-1);
+    }
+
+    .search-shortcuts kbd {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: var(--spacing-1);
+        border: 1px solid var(--border-default);
+        border-radius: var(--radius-sm);
+        background-color: var(--input-shortcut);
+        color: var(--text-secondary);
+        font-size: 0.875rem;
+        font-family: var(--font-body);
+        line-height: .8rem;
+    }
+
+    .header-help {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: var(--spacing-4);
+    }
+
+    .header-help a {
+        color: var(--text-primary);
+        text-decoration: none;
+        font-family: var(--font-body);
+        font-weight: 600;
+        padding: var(--spacing-1) var(--spacing-2);
+        border-radius: var(--spacing-1);
+        corner-shape: squircle;
+    }
+
+    .header-help a:hover {
+        background-color: var(--input-shortcut);
+    }
+
+    .header-help button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: var(--spacing-1) var(--spacing-1);
+        border-radius: var(--spacing-1);
+        corner-shape: squircle;
+        display: flex;
+        color: var(--text-primary);
+    }
+
+    .header-help button:hover {
+        background-color: var(--input-shortcut);
+    }
+
+    .icon-theme-sun {
+        display: none;
+    }
+
+    .search-results {
+        position: absolute;
+        top: calc(100% - 1px);
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-subtle);
+        border: 1px solid var(--border-default);
+        corner-shape: squircle;
+        border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+        padding: var(--spacing-2);
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-2);
+        z-index: 100;
+        max-height: 70vh;
+        overflow-y: auto;
+        box-sizing: border-box;
+    }
+
+    .search-wrapper:has(input:focus) .search-results {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 1px var(--primary-color);
+    }
+
+    .search-result-item {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-1);
+        padding: var(--spacing-4);
+        border: 1px solid var(--border-default);
+        corner-shape: squircle;
+        border-radius: var(--radius-xl);
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+        transition: background-color 0.15s ease;
+    }
+
+    .search-result-item:hover {
+        background-color: var(--bg-default);
+    }
+
+    .search-result-breadcrumb {
+        font-size: 0.875rem;
+        font-family: var(--font-body);
+        color: var(--text-secondary);
+    }
+
+    .search-result-title {
+        font-size: 1.25rem;
+        font-family: var(--font-body-semibold);
+        color: var(--text-primary);
+        line-height: 1.2;
+    }
+
+    .search-no-results {
+        padding: var(--spacing-4);
+        color: var(--text-secondary);
+        font-family: var(--font-body);
+        text-align: center;
+        margin: 0;
+    }
+}
+
+[data-theme="dark"] .icon-theme-sun {
+    display: block;
+}
+
+[data-theme="dark"] .icon-theme-moon {
+    display: none;
+}

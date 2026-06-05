@@ -1,0 +1,27 @@
+[
+    {
+        "breadcrumb": ["Présentation", "À propos d'Alibi"],
+        "title": "Alibi, une enquête au cœur du numérique",
+        "href": "/presentation/a-propos.html"
+    },
+    {
+        "breadcrumb": ["L'atelier", "Synopsis"],
+        "title": "Une enquête au cœur du collège",
+        "href": "/atelier/synopsis.html"
+    },
+    {
+        "breadcrumb": ["L'atelier", "Ressources pédagogiques"],
+        "title": "Fiches d'activités pour la classe",
+        "href": "/atelier/ressources.html"
+    },
+    {
+        "breadcrumb": ["Présentation", "Équipe"],
+        "title": "L'équipe derrière le projet",
+        "href": "/presentation/equipe.html"
+    },
+    {
+        "breadcrumb": ["Support"],
+        "title": "Aide et contact",
+        "href": "/support.html"
+    }
+]

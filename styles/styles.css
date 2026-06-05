@@ -1,5 +1,5 @@
 @import "button.css";
-@import "fonts.css";
+@import "font.css";
 @import "alert.css";
 @import "input.css";
 @import "form.css";
@@ -14,8 +14,8 @@
 
 
 body {
-    background-color: var(--color-bg);
-    font-family: square-serif, sans-serif;
+    background-color: var(--bg-default);
+    font-family: var(--font-body);
     margin: 0;
     padding: 0.625rem 0.625rem 0 0.625rem;
     min-height: 100%;

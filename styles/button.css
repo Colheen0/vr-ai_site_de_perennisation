@@ -75,6 +75,8 @@ outline-offset: -0.125rem;
     align-items: center;
     padding: var(--spacing-4);
     gap: var(--spacing-2);
+    margin: var(--spacing-4) auto;
+    border-top: 0.125rem solid var(--border-default);
 }
 
 .logo-link {

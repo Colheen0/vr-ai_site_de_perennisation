@@ -1,5 +1,12 @@
 :root {
 
+/*FONTS*/
+
+--font-heading: "SquareSerif-Demi", serif;
+--font-body: "General Sans Medium", sans-serif;
+--font-body-semibold: "General Sans Semibold", sans-serif;
+
+
 /*SPACING*/
 
 --spacing-1: 0.25rem; /* 4px */
@@ -25,7 +32,7 @@
 /*yellow*/
 --yellow-100: #fffaf0 ;
 --yellow-200: #fff4e1 ;
---yellow-300: #fee6b1 ;
+--yellow-300: #fee6be ;
 --yellow-400: #fed081 ;
 --yellow-500: #FDAB1C ;
 --yellow-700: #654001 ;
@@ -90,7 +97,9 @@
         --error-border: var(--yellow-700);
         --error-text: var(--yellow-500);
         --error-input: var(--yellow-300);
-        --gradient: linear-gradient(180deg, var(--gradient-red-400) 0%, var(--gradient-red-500) 50%, var(--gradient-red-600) 100%);
+        --gradient-1: var(--gradient-red-400);
+        --gradient-2: var(--gradient-red-500);
+        --gradient-3: var(--gradient-red-600);
 }
 
 [data-theme="light"] {
@@ -112,6 +121,9 @@
         --error-border: var(--red-300);
         --error-text: var(--red-700);
         --error-input: var(--red-600);
-        --gradient: linear-gradient(180deg, var(--gradient-red-400) 0%, var(--gradient-red-500) 50%, var(--gradient-red-600) 100%);
+        --gradient-1: var(--gradient-yellow-100);
+        --gradient-2: var(--gradient-yellow-200);
+        --gradient-3: var(--gradient-yellow-300);
 }
+
 
