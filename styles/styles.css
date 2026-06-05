@@ -12,13 +12,18 @@
     box-sizing: border-box;
 }
 
-html,
+
 body {
     background-color: var(--bg-default);
     font-family: var(--font-body);
     margin: 0;
     padding: 0.625rem 0.625rem 0 0.625rem;
     min-height: 100%;
+}
+
+h2{
+    font-familiy: square-serif, serif;
+    
 }
 
 footer {
