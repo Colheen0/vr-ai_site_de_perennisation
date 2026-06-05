@@ -4,6 +4,7 @@
 @import "input.css";
 @import "form.css";
 @import "header.css";
+@import "layout.css";
 
 .mobile-only {
     display: none;
@@ -19,12 +20,19 @@
     }
 }
 
-body {
+html {
     background-color: var(--bg-default);
+}
+
+body {
+    background-color: transparent;
     font-family: var(--font-body);
     color: var(--text-primary);
     padding: 0;
     margin: 0;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
 }
 
 [hidden] {

@@ -1,6 +1,12 @@
 const buttonToggle = document.querySelector('[data-theme-toggle]');
 const htmlElement = document.documentElement;
 
+function updateButtonAria(theme) {
+  const isDark = theme === 'dark';
+  buttonToggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+  buttonToggle.setAttribute('aria-label', isDark ? 'Passer au mode clair' : 'Passer au mode sombre');
+}
+
 (function initTheme() {
   const stored = localStorage.getItem('theme');
   if (stored) {
@@ -12,6 +18,7 @@ const htmlElement = document.documentElement;
       htmlElement.setAttribute('data-theme', prefersLight ? 'light' : 'dark');
     }
   }
+  updateButtonAria(htmlElement.getAttribute('data-theme'));
 })();
 
 buttonToggle.addEventListener('click', () => {
@@ -19,4 +26,5 @@ buttonToggle.addEventListener('click', () => {
   const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
   htmlElement.setAttribute('data-theme', newTheme);
   localStorage.setItem('theme', newTheme);
+  updateButtonAria(newTheme);
 });
