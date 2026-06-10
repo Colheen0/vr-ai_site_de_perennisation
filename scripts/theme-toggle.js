@@ -1,10 +1,12 @@
-const buttonToggle = document.querySelector('[data-theme-toggle]');
+const buttonToggles = document.querySelectorAll('[data-theme-toggle]');
 const htmlElement = document.documentElement;
 
 function updateButtonAria(theme) {
   const isDark = theme === 'dark';
-  buttonToggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
-  buttonToggle.setAttribute('aria-label', isDark ? 'Passer au mode clair' : 'Passer au mode sombre');
+  buttonToggles.forEach(btn => {
+    btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+    btn.setAttribute('aria-label', isDark ? 'Passer au mode clair' : 'Passer au mode sombre');
+  });
 }
 
 (function initTheme() {
@@ -21,10 +23,12 @@ function updateButtonAria(theme) {
   updateButtonAria(htmlElement.getAttribute('data-theme'));
 })();
 
-buttonToggle.addEventListener('click', () => {
-  const currentTheme = htmlElement.getAttribute('data-theme');
-  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-  htmlElement.setAttribute('data-theme', newTheme);
-  localStorage.setItem('theme', newTheme);
-  updateButtonAria(newTheme);
+buttonToggles.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const currentTheme = htmlElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    htmlElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateButtonAria(newTheme);
+  });
 });

@@ -35,6 +35,12 @@ body {
     height: 100vh;
 }
 
+@media (max-width: 768px) {
+    :root {
+        --mobile-header-height: 110px;
+    }
+}
+
 [hidden] {
     display: none !important;
 }
