@@ -99,9 +99,11 @@ function setupTocScroll() {
             if (!target) return;
 
             if (window.innerWidth <= 768) {
-                const offset = document.querySelector('header.mobile-only')?.offsetHeight ?? 0;
-                const targetTop = target.getBoundingClientRect().top + window.scrollY - offset - 16;
-                window.scrollTo({ top: targetTop, behavior: 'smooth' });
+                const targetTop = target.getBoundingClientRect().top
+                    - contentEl.getBoundingClientRect().top
+                    + contentEl.scrollTop
+                    - 16;
+                contentEl.scrollTo({ top: targetTop, behavior: 'smooth' });
             } else {
                 const targetTop = target.getBoundingClientRect().top
                     - contentEl.getBoundingClientRect().top
