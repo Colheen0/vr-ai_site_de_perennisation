@@ -1,80 +1,19 @@
+@import"variable.css";
 
-@import "variables.css";
+:root {
+    --color-card-bg: var(--input-shortcut);
+    --color-card-border: var(--border-default);
+    --color-card-text-title: var(--text-primary);
+    --color-card-text-body: var(--text-secondary);
+    --spacing: var(--spacing-6);
+    --radius: var(--radius-md);
+}
 
-/* Input component */
 .input {
-    background-color: var(--input-shortcut);
-    border: 0.125rem solid var(--border-default);
-    border-radius: var(--radius-md);
-    color: var(--text-primary);
-    margin: var(--spacing-4);
+    background-color: var(--color-card-bg);
+    border: 2px solid var(--color-card-border);
+    border-radius: var(--radius);
+    padding: var(--spacing);
+    margin: var(--spacing);
+    color: var(--color-card-text-body);
 }
-
-.input h2 {
-    color: var(--text-secondary);
-    margin-bottom: var(--spacing-2);
-
-}
-
-.input-text {
-    margin: var(--spacing-6);
-}
-
-.input a,
-.link a {
-    color: var(--text-secondary);
-    text-decoration: none;
-}
-
-.link {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin: var(--spacing-4);
-}
-
-.link a {
-    font-weight: bold;
-}
-
-.input-a {
-    display: flex;
-    justify-content: center;
-}
-
-/* Card layout */
-.card-container {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 1fr;
-    gap: var(--spacing-4);
-}
-
-.card-container > .input {
-    margin: 0;
-}
-
-.icon-arrow-svg {
-    height: 1rem;
-    width: 1rem;
-    -webkit-mask-image: url('/assets/svg/arrow.svg');
-    mask-image: url('/assets/svg/arrow.svg');
-    mask-size: contain;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    transition: background-color 0.3s ease;
-    background-color: var(--text-secondary);
-    margin-left: var(--spacing-2);
-}
-
-
-/* Responsive design */
-
-@media (min-width: 768px) {
-    .card-container {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-
-

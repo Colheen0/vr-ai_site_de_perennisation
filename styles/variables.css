@@ -3,8 +3,7 @@
 /*FONTS*/
 
 --font-heading: "SquareSerif-Demi", serif;
---font-body: "General Sans Medium", sans-serif;
---font-body-semibold: "General Sans Semibold", sans-serif;
+--font-body: 'General Sans', sans-serif;
 
 
 /*SPACING*/
@@ -97,9 +96,6 @@
         --error-border: var(--yellow-700);
         --error-text: var(--yellow-500);
         --error-input: var(--yellow-300);
-        --success-bg: #0a1f0d;
-        --success-border: #1e6630;
-        --success-text: #4caf66;
         --gradient-1: var(--gradient-red-400);
         --gradient-2: var(--gradient-red-500);
         --gradient-3: var(--gradient-red-600);
@@ -124,9 +120,6 @@
         --error-border: var(--red-300);
         --error-text: var(--red-700);
         --error-input: var(--red-600);
-        --success-bg: #e8f5e9;
-        --success-border: #81c784;
-        --success-text: #2e7d32;
         --gradient-1: var(--gradient-yellow-100);
         --gradient-2: var(--gradient-yellow-200);
         --gradient-3: var(--gradient-yellow-300);
