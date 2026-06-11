@@ -3,7 +3,7 @@
         "links": [
             {
                 "label": "Vue d'ensemble",
-                "href": "vue-densemble.html",
+                "href": "index.html",
                 "pageId": "vue-densemble"
             }
         ],
@@ -20,6 +20,11 @@
                         "label": "Objectifs pédagogiques",
                         "href": "objectifs.html",
                         "pageId": "objectifs"
+                    },
+                    {
+                        "label": "Template",
+                        "href": "template.html",
+                        "pageId": "template"
                     }
                 ]
             },
@@ -96,8 +101,8 @@
         ]
     },
     "pages": {
-        "synopsis": {
-            "title": "Synopsis",
+        "template": {
+            "title": "Template",
             "toc": [
                 {
                     "label": "Une situation qui paraît évidente",
@@ -131,7 +136,7 @@
             "content": [
                 {
                     "type": "h1",
-                    "text": "Synopsis"
+                    "text": "Template"
                 },
                 {
                     "type": "h2",
