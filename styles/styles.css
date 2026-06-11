@@ -5,7 +5,8 @@
 @import "form.css";
 @import "variables.css";
 @import "copy-box.css";
-
+@import "table.css";
+@import "intro.css";
 
 *,
 *::before,

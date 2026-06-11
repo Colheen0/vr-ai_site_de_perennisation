@@ -80,6 +80,7 @@
 
 [data-theme="dark"] {
         color-scheme: dark;
+        --intro-img: url('/assets/img/intro_img_dark.png');
         --primary-color:var(--yellow-500);
         --primary-color-hover:var(--yellow-400);
         --color-text-button-primary: var(--neutral-900);
@@ -107,6 +108,7 @@
 
 [data-theme="light"] {
         color-scheme: light;
+        --intro-img: url('/assets/img/intro_img_light.png');
         --primary-color:var(--red-700);
         --primary-color-hover:var(--red-600);
         --color-text-button-primary: var(--neutral-100);

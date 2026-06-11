@@ -48,7 +48,8 @@
             font-family: "General Sans Semibold", sans-serif;
         }
 
-        .specimen-xl  { font-size: 3rem;    line-height: 1.1; }
+        .specimen-xxl  { font-size: 3rem;    line-height: 1.1; }
+        .specimen-xl  { font-size: 2.5rem;   line-height: 1.2; }
         .specimen-lg  { font-size: 2rem;    line-height: 1.2; }
         .specimen-md  { font-size: 1.25rem; line-height: 1.4; }
         .specimen-sm  { font-size: 1rem;    line-height: 1.5; }
