@@ -1,16 +1,34 @@
-const buttonToggle = document.querySelector('[data-theme-toggle]');
+const buttonToggles = document.querySelectorAll('[data-theme-toggle]');
 const htmlElement = document.documentElement;
 
-const savedTheme = localStorage.getItem('theme');
-const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-const fileTheme = htmlElement.getAttribute('data-theme');
+function updateButtonAria(theme) {
+  const isDark = theme === 'dark';
+  buttonToggles.forEach(btn => {
+    btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+    btn.setAttribute('aria-label', isDark ? 'Passer au mode clair' : 'Passer au mode sombre');
+  });
+}
 
-const initialTheme = savedTheme ?? systemTheme ?? fileTheme;
-htmlElement.setAttribute('data-theme', initialTheme);
+(function initTheme() {
+  const stored = localStorage.getItem('theme');
+  if (stored) {
+    htmlElement.setAttribute('data-theme', stored);
+  } else {
+    const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (prefersLight || prefersDark) {
+      htmlElement.setAttribute('data-theme', prefersLight ? 'light' : 'dark');
+    }
+  }
+  updateButtonAria(htmlElement.getAttribute('data-theme'));
+})();
 
-buttonToggle.addEventListener('click', () => {
+buttonToggles.forEach(btn => {
+  btn.addEventListener('click', () => {
     const currentTheme = htmlElement.getAttribute('data-theme');
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     htmlElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
+    updateButtonAria(newTheme);
+  });
 });

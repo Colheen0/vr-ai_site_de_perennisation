@@ -22,6 +22,14 @@ body {
     min-height: 100%;
 }
 
+@media (max-width: 768px) {
+    :root {
+        --mobile-header-height: 110px;
+    }
+}
+
+[hidden] {
+    display: none !important;
 h2{
     font-family: var(--font-heading);
     
