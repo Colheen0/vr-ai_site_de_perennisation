@@ -1,6 +1,6 @@
 @import "variables.css";
 
-.intro {
+.intro_img {
     min-height: 300px;
     border-radius: var(--radius-lg);
     margin: var(--spacing-4) auto;
@@ -16,17 +16,46 @@
     background-position: center;
     background-repeat: no-repeat;
     color: var(--text-primary); 
+}
 
-.intro h1 {
-    font-size: 2rem;
+.intro_img h1 {
     margin: 0;
     max-width: 25ch; 
 }
 
-.intro .text_limit {
+.intro_img .text_limit {
     font-weight: 300;
     margin: 0;
     max-width: 65ch; 
 }
 
+.info_img {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: var(--spacing-2);
+    max-width: 100%;
+    padding: 0 var(--spacing-2);
+}
+
+.info_box {
+    margin: var(--spacing-2);
+}
+
+.info_img img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    margin: var(--spacing-2);
+}
+
+.info_img p {
+    margin-top: var(--spacing-2);
+    font-weight: 300;
+    color: var(--text-secondary);
+    text-align: right;
+}
+
+@media (min-width: 768px) {
+    .info_img {
+        grid-template-columns: 1fr 1fr;
+    }
 }
