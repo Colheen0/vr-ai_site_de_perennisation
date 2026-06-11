@@ -35,7 +35,7 @@ async function copyText() {
             setTimeout(() => {
                 checkLogo.style.display = 'none';
                 copyLogo.style.display = 'block';
-            }, 1500);
+            }, 5000);
         }
     } catch (err) {
         console.error('Failed to copy: ', err);

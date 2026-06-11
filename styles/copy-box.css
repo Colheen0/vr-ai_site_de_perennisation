@@ -15,7 +15,7 @@
 
 .copy-button {
     position: absolute;
-    top: 0.50rem;
+    bottom: 0.75rem;
     right: 0;
     background: none;
     border: none;
@@ -40,4 +40,17 @@
     -webkit-mask-image: url('/assets/svg/check.svg');
     mask-image: url('/assets/svg/check.svg');
     display: none;
+}
+
+.copy-message {
+    position: absolute;
+    bottom: 0;
+    right: 1rem;
+    background-color: var(--text-secondary);
+    color: var(--input-shortcut);
+    padding: var(--spacing-1) var(--spacing-2);
+    border-radius: var(--radius-sm);
+    font-size: 0.875rem;
+    display: none;
+    width: max-content;
 }

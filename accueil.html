@@ -26,7 +26,7 @@
     </button>
 
     <h2 class="squareserif specimen-lg">Test titre</h2>
-    <p>Test paragraphe</p>
+    <p class="text_limit">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto excepturi est doloribus aliquam odit unde harum asperiores obcaecati officiis repellat!</p>
 
     <span class="alert info">
        <div class="icon-alert-svg"></div> test
@@ -107,13 +107,14 @@
     </div>
 
     <div class="copy-box">
-        <p class="copy-text" id="text">
+        <p class="copy-text text_limit" id="text">
             Remplacer la personne présente sur l’image par un élève,
             conserver la perspective et l’éclairage,
             ajouter une incohérence légère dans les proportions des mains,
             garder un rendu réaliste.
         </p>
-        <button onclick="copyText()" class="copy-button"><div class="copy-logo" id="copy-logo"></div> <div class="copy-logo check" id="check"></div></button>
+        <button onclick="copyText()" class="copy-button"><div class="copy-logo" id="copy-logo"></div> <div class="copy-logo check" id=""></div></button>
+        <p class="copy-message" id="check" aria-label="Message de confirmation">Le texte a été copié !</p>
     </div>
 
     <form action="https://formspree.io/f/mbdeleeb" method="POST" class="form" novalidate>

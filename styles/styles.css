@@ -27,6 +27,10 @@ h2{
     
 }
 
+.text_limit {
+    width: 45ch
+}
+
 footer {
     border-top: 0.125rem solid var(--border-default);
     margin-top: var(--spacing-4);
@@ -35,4 +39,8 @@ footer {
     align-items: center;
     padding: 0.625rem;
     gap: var(--spacing-12);
+}
+
+@media (min-width: 768px) {
+
 }
