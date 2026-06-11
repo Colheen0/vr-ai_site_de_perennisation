@@ -15,42 +15,150 @@
     type="button"
     data-theme-toggle
     aria-label="Change to light theme"
+    class="general-sans-medium "
   >Changer de thème</button>
-    <button class="btn">
+    <button class="btn general-sans-semibold ">
         test
     </button>
 
-    <button class="btn" disabled>
+    <button class="btn general-sans-semibold " disabled>
         disabled
     </button>
-    <script src="scripts/theme-toggle.js"></script>
+
+    <h2 class="squareserif specimen-lg">Test titre</h2>
+    <p>Test paragraphe</p>
 
     <span class="alert info">
-        test
+       <div class="icon-alert-svg"></div> test
     </span>
 
     <span class="alert error">
-        test
+        <div class="icon-alert-svg"></div>test
     </span>
 
-    <div class="input">
-        <h2>Card Title</h2>
-        <p>Card content goes here.</p>
-        <div class="lien">
-            <a href="">Lien test</a>
+    <div class="card-container">
+
+        <div class="input">
+            <div class="input-text">
+                <h2 class="squareserif">Card Title</h2>
+                <p class="general-sans-medium ">Card content goes here.</p>
+            </div>
+            <div class="link">
+                <a href="">Lien test</a>
+                <div class="icon-arrow-svg"></div>
+            </div>
         </div>
+
+        <div class="input">
+            <div class="input-text">
+                <h2 class="squareserif">Card Title</h2>
+                <p class="general-sans-medium ">Card content goes here.</p>
+            </div>
+            <div class="link">
+                <a href="">Lien test</a>
+                <div class="icon-arrow-svg"></div>
+            </div>
+        </div>
+
+        <div class="input squareserif">
+            <div class="input-text">
+                <h2 class="squareserif">Card Title</h2>
+                <p class="general-sans-medium ">Card content goes here.</p>
+            </div>
+            <div class="link">
+                <a href="">Lien test</a>
+                <div class="icon-arrow-svg"></div>
+            </div>
+        </div>
+
+        <div class="input squareserif">
+            <div class="input-text">
+                <h2 class="squareserif">Card Title</h2>
+                <p class="general-sans-medium ">Card content goes here.</p>
+            </div>
+            <div class="link">
+                <a href="">Lien test</a>
+                <div class="icon-arrow-svg"></div>
+            </div>
+        </div>
+
+        <div class="input squareserif">
+            <div class="input-text">
+                <h2 class="squareserif">Card Title</h2>
+                <p class="general-sans-medium ">Card content goes here.</p>
+            </div>
+            <div class="link">
+                <a href="">Lien test</a>
+                <div class="icon-arrow-svg"></div>
+            </div>
+        </div>
+
+        <div class="input squareserif">
+            <div class="input-text">
+                <h2 class="squareserif">Card Title</h2>
+                <p class="general-sans-medium ">Card content goes here.</p>
+            </div>
+            <div class="link">
+                <a href="">Lien test</a>
+                <div class="icon-arrow-svg"></div>
+            </div>
+        </div>
+        
     </div>
 
-    <form action="">
-        <input type="text" name="name" id="name" placeholder="Nom*" class="input">
-        <label for="name"></label>
-        <input type="email" name="email" id="email" placeholder="adresse mail*" class="input">
-        <label for="email"></label>
-        <input type="text" name="subject" id="subject" placeholder="Sujet*" class="input">
-        <label for="subject"></label>
-        <input type="text" name="message" id="message" placeholder="Message*" class="input">
-        <label for="message"></label>
-        <input type="submit" value="send" class="btn">
-    </form>
+    <div class="copy-box">
+        <p class="copy-text" id="text">
+            Remplacer la personne présente sur l’image par un élève,
+            conserver la perspective et l’éclairage,
+            ajouter une incohérence légère dans les proportions des mains,
+            garder un rendu réaliste.
+        </p>
+        <button onclick="copyText()" class="copy-button"><div class="copy-logo" id="copy-logo"></div> <div class="copy-logo check" id="check"></div></button>
+    </div>
+
+    <form action="https://formspree.io/f/mbdeleeb" method="POST" class="form" novalidate>
+    <p>Tout les champs sont obligatoires.</p>
+
+    <label for="name">
+        <input type="text" id="name" name="name" placeholder=" " required autocomplete="name">
+        <span>Nom</span>
+    </label>
+
+    <label for="email">
+        <input type="email" id="email" name="email" placeholder=" " aria-invalid="false" autocomplete="email" required>
+        <span>Email</span>
+    </label>
+
+    <label for="subject">
+        <input type="text" id="subject" name="subject" placeholder=" " required>
+        <span>Sujet</span>
+    </label>
+
+    <label for="message">
+        <textarea id="message" name="message" placeholder=" " required></textarea>
+        <span>Message</span>
+    </label>
+
+    <div id="errors" role="alert" aria-live="assertive" class="form-feedback">
+        <div class="icon-alert-svg"></div>
+        <span class="feedback-text"></span>
+    </div>
+
+    <button class="btn general-sans-semibold " type="submit">Envoyer</button>
+</form> 
+
+    <div class="btn-link_container">
+        <a href="/template.html" class="btn-link">< Template</a>
+        <a href="/font.html" class="btn-link disabled" aria-disabled="true">Font ></a>
+    </div>
+
 </body>
+<script src="scripts/theme-toggle.js"></script>
+<script src="scripts/error-message.js"></script>
+<script src="scripts/copy.js"></script>
+<footer>
+        <a href="" class="logo-link"><img src="/assets/svg/logoMetfordTigers.svg" alt="lien_accueil"></a>
+        <p>Alibi - Atelier pédagogique</p>
+        <p>Projet BUT MMI 2026-2027</p>
+</footer>
 </html>

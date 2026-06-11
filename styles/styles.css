@@ -1,38 +1,25 @@
 @import "button.css";
-@import "fonts.css";
+@import "font.css";
 @import "alert.css";
 @import "input.css";
 @import "form.css";
-@import "header.css";
-@import "layout.css";
+@import "variables.css";
+@import "copy-box.css";
 
-.mobile-only {
-    display: none;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-@media (max-width: 768px) {
-    .desktop-only {
-        display: none;
-    }
-
-    .mobile-only {
-        display: block;
-    }
-}
-
-html {
-    background-color: var(--bg-default);
-}
 
 body {
-    background-color: transparent;
+    background-color: var(--bg-default);
     font-family: var(--font-body);
-    color: var(--text-primary);
-    padding: 0;
     margin: 0;
-    position: relative;
-    overflow: hidden;
-    height: 100vh;
+    padding: 0.625rem 0.625rem 0 0.625rem;
+    min-height: 100%;
 }
 
 @media (max-width: 768px) {
@@ -43,8 +30,17 @@ body {
 
 [hidden] {
     display: none !important;
+h2{
+    font-family: var(--font-heading);
+    
 }
 
-[data-theme="dark"] .invert-on-dark {
-    filter: invert(1);
+footer {
+    border-top: 0.125rem solid var(--border-default);
+    margin-top: var(--spacing-4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.625rem;
+    gap: var(--spacing-12);
 }
