@@ -136,8 +136,15 @@ function renderContent(blocks) {
 
     const mobileHeader = contentEl.querySelector('.mobile-toc-header');
 
+    function normalizeAssetPath(path) {
+        if (!path || typeof path !== 'string') return '';
+        if (path.startsWith('/assets/')) return path.slice(1);
+        return path;
+    }
+
     function renderInfoImg(item) {
-        return `<figure class="info_img"><img src="${item.src}" alt="${item.alt ?? ''}">${item.caption ? `<figcaption>${item.caption}</figcaption>` : ''}</figure>`;
+        const src = normalizeAssetPath(item.src);
+        return `<figure class="info_img"><img src="${src}" alt="${item.alt ?? ''}">${item.caption ? `<figcaption>${item.caption}</figcaption>` : ''}</figure>`;
     }
 
     const renderers = {

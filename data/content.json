@@ -199,13 +199,13 @@
                 },
                 {
                     "type": "infoImg",
-                    "src": "/assets/img/couloir.png",
+                    "src": "assets/img/couloir.png",
                     "alt": "Photo de la pièce 1",
                     "caption": "Pièce 1 : vue de la première salle de fouille."
                 },
                 {
                     "type": "infoImg",
-                    "src": "/assets/img/couloir-copy-0.png",
+                    "src": "assets/img/couloir-copy-0.png",
                     "alt": "Photo de la pièce 2",
                     "caption": "Pièce 2 : seconde salle visible côte à côte en desktop."
                 },
@@ -215,7 +215,7 @@
                 },
                 {
                     "type": "infoImg",
-                    "src": "/assets/img/bureau.png",
+                    "src": "assets/img/bureau.png",
                     "alt": "Bureau vu en grand angle",
                     "caption": "Lorem ipsum dolor sit amet."
                 },
