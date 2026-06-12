@@ -24,7 +24,7 @@
 
     function renderResults(results, resultsEl) {
         if (results.length === 0) {
-            resultsEl.innerHTML = '<p class="search-no-results">Aucun résultat</p>';
+            resultsEl.innerHTML = '<p class="search-no-results" aria-live="polite" role="status">Aucun résultat</p>';
         } else {
             resultsEl.innerHTML = results.map(item => `
                 <a class="search-result-item" href="${safePath(item.href)}">
