@@ -1,7 +1,11 @@
 (function () {
     let searchData = [];
 
-    fetch('data/search-data.json')
+    const resolvePath = typeof window.resolveSitePath === 'function'
+        ? window.resolveSitePath
+        : (path => path);
+
+    fetch(resolvePath('data/search-data.json'))
         .then(r => r.json())
         .then(data => { searchData = data; })
         .catch(() => {});

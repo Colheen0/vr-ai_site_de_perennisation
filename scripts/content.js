@@ -1,9 +1,28 @@
+(function () {
+    function getSiteBasePath() {
+        const isGithubPages = window.location.hostname.endsWith('github.io');
+        if (!isGithubPages) return '/';
+
+        const segments = window.location.pathname.split('/').filter(Boolean);
+        return segments.length > 0 ? `/${segments[0]}/` : '/';
+    }
+
+    window.resolveSitePath = function resolveSitePath(path) {
+        if (!path || typeof path !== 'string') return '';
+        if (/^(?:https?:)?\/\//.test(path) || path.startsWith('data:')) return path;
+
+        const normalized = path.replace(/^\/+/, '').replace(/^\.\//, '');
+        const base = getSiteBasePath();
+        return `${base}${normalized}`;
+    };
+})();
+
 (async function () {
     const pageId = document.body.dataset.page;
     if (!pageId) return;
 
     try {
-        const res = await fetch('data/content.json');
+        const res = await fetch(window.resolveSitePath('data/content.json'));
         const data = await res.json();
 
         if (data.nav) renderNav(data.nav, pageId);
@@ -136,14 +155,8 @@ function renderContent(blocks) {
 
     const mobileHeader = contentEl.querySelector('.mobile-toc-header');
 
-    function normalizeAssetPath(path) {
-        if (!path || typeof path !== 'string') return '';
-        if (path.startsWith('/assets/')) return path.slice(1);
-        return path;
-    }
-
     function renderInfoImg(item) {
-        const src = normalizeAssetPath(item.src);
+        const src = window.resolveSitePath(item.src);
         return `<figure class="info_img"><img src="${src}" alt="${item.alt ?? ''}">${item.caption ? `<figcaption>${item.caption}</figcaption>` : ''}</figure>`;
     }
 
