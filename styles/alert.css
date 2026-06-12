@@ -17,8 +17,8 @@
 .icon-alert-svg {
     height: 1.5rem;
     width: 1.5rem;
-    -webkit-mask-image: url('/assets/svg/alert.svg');
-    mask-image: url('/assets/svg/alert.svg');
+    -webkit-mask-image: url('../assets/svg/alert.svg');
+    mask-image: url('../assets/svg/alert.svg');
     -webkit-mask-size: contain;
     mask-size: contain;
     -webkit-mask-repeat: no-repeat;

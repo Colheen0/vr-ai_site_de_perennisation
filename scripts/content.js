@@ -3,7 +3,7 @@
     if (!pageId) return;
 
     try {
-        const res = await fetch('/data/content.json');
+        const res = await fetch('data/content.json');
         const data = await res.json();
 
         if (data.nav) renderNav(data.nav, pageId);

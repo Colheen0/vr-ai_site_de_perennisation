@@ -100,7 +100,7 @@ header {
         cursor: pointer;
         height: 13px;
         width: 13px;
-        background-image: url("/assets/svg/iconCancelSearch.svg");
+        background-image: url("../assets/svg/iconCancelSearch.svg");
         background-repeat: no-repeat;
         background-size: contain;
     }
@@ -368,7 +368,7 @@ header {
         cursor: pointer;
         height: 13px;
         width: 13px;
-        background-image: url("/assets/svg/iconCancelSearch.svg");
+        background-image: url("../assets/svg/iconCancelSearch.svg");
         background-repeat: no-repeat;
         background-size: contain;
     }
