@@ -2,7 +2,7 @@
 
 .alert {
     display: flex;
-    align-items: center;
+    align-items: start;
     padding: var(--spacing-4);
     margin: var(--spacing-4);
     border-radius: var(--radius-md);
@@ -15,8 +15,8 @@
 }
 
 .icon-alert-svg {
-    height: var(--spacing-4);
-    width: var(--spacing-4);
+    height: 1.5rem;
+    width: 1.5rem;
     -webkit-mask-image: url('/assets/svg/alert.svg');
     mask-image: url('/assets/svg/alert.svg');
     -webkit-mask-size: contain;
@@ -24,7 +24,8 @@
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     transition: background-color 0.3s ease;
-    margin-right: var(--spacing-2);
+    margin-right: 0.8rem;
+    margin-top: 0.25rem;
 }
 
 .info .icon-alert-svg {
@@ -43,6 +44,6 @@
 }
 
 .error img {
-    margin-right: var(--spacing-2);
+    margin-right: 0.8rem;
     color: var(--error-bg);
 }

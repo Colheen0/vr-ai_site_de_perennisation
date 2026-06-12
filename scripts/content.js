@@ -136,22 +136,58 @@ function renderContent(blocks) {
 
     const mobileHeader = contentEl.querySelector('.mobile-toc-header');
 
+    function renderInfoImg(item) {
+        return `<figure class="info_img"><img src="${item.src}" alt="${item.alt ?? ''}">${item.caption ? `<figcaption>${item.caption}</figcaption>` : ''}</figure>`;
+    }
+
     const renderers = {
         h1:    b => `<h1${b.id ? ` id="${b.id}"` : ''}>${b.text}</h1>`,
         h2:    b => `<h2${b.id ? ` id="${b.id}"` : ''}>${b.text}</h2>`,
         h3:    b => `<h3${b.id ? ` id="${b.id}"` : ''}>${b.text}</h3>`,
         p:     b => `<p>${b.text}</p>`,
-        alertInfo: b => `<span class="alert ${b.variant ?? 'info'}">${b.text}</span>`,
-        alertError: b => `<span class="alert ${b.variant ?? 'error'}">${b.text}</span>`,
+        alertInfo:  b => `<span class="alert ${b.variant ?? 'info'}"><div class="icon-alert-svg"></div>${b.text}</span>`,
+        alertError: b => `<span class="alert ${b.variant ?? 'error'}"><div class="icon-alert-svg"></div>${b.text}</span>`,
+        table: b => {
+            const headers = b.headers.map(h => `<th>${h}</th>`).join('');
+            const rows = b.rows.map(r => `<tr>${r.map(c => `<td>${c}</td>`).join('')}</tr>`).join('');
+            return `<table><thead><tr>${headers}</tr></thead><tbody>${rows}</tbody></table>`;
+        },
+        copyBox: b => `<div class="copy-box"><p class="copy-text" id="text">${b.text}</p><button onclick="copyText()" class="copy-button" aria-label="Copier"><div class="copy-logo" id="copy-logo"></div><div class="copy-logo check" id="check"></div></button></div>`,
+        introImg: b => `<div class="intro_img"><h1>${b.title}</h1>${b.description ? `<p class="text_limit">${b.description}</p>` : ''}</div>`,
+        card: b => `<div class="input"><div class="input-text"><h2>${b.title}</h2><p>${b.content}</p></div>${b.link ? `<div class="link"><a href="${b.link.href}">${b.link.label}<div class="icon-arrow-svg"></div></a></div>` : ''}</div>`,
+        cardContainer: b => `<div class="card-container">${(b.cards ?? []).map(card => `<div class="input"><div class="input-text"><h2>${card.title}</h2><p>${card.content}</p></div>${card.link ? `<div class="link"><a href="${card.link.href}">${card.link.label}<div class="icon-arrow-svg"></div></a></div>` : ''}</div>`).join('')}</div>`,
+        form: b => `<form action="${b.action ?? '#'}" method="POST" class="form" novalidate><p>${b.description ?? 'Tous les champs sont obligatoires.'}</p>${(b.fields ?? []).map(f => f.type === 'textarea' ? `<label for="${f.id}"><textarea id="${f.id}" name="${f.id}" placeholder=" " required></textarea><span>${f.label}</span></label>` : `<label for="${f.id}"><input type="${f.type ?? 'text'}" id="${f.id}" name="${f.id}" placeholder=" " required><span>${f.label}</span></label>`).join('')}<div id="errors" role="alert" aria-live="assertive" class="form-feedback"><div class="icon-alert-svg"></div><span class="feedback-text"></span></div><button class="btn" type="submit">${b.submit ?? 'Envoyer'}</button></form>`,
     };
 
-    contentEl.innerHTML = blocks
-        .map(b => renderers[b.type]?.(b) ?? '')
-        .join('');
+    const htmlParts = [];
+
+    for (let i = 0; i < blocks.length; i++) {
+        const block = blocks[i];
+
+        if (block.type === 'infoImg') {
+            const galleryItems = [block];
+
+            while (i + 1 < blocks.length && blocks[i + 1].type === 'infoImg') {
+                galleryItems.push(blocks[i + 1]);
+                i++;
+            }
+
+            const columns = Math.min(galleryItems.length, 3);
+            const singleClass = galleryItems.length === 1 ? ' info_img_gallery--single' : '';
+            htmlParts.push(`<div class="info_img_gallery${singleClass}" style="--info-columns: ${columns};">${galleryItems.map(renderInfoImg).join('')}</div>`);
+            continue;
+        }
+
+        htmlParts.push(renderers[block.type]?.(block) ?? '');
+    }
+
+    contentEl.innerHTML = htmlParts.join('');
 
     if (mobileHeader) {
         contentEl.insertBefore(mobileHeader, contentEl.firstChild);
     }
+
+    if (typeof initForm === 'function') initForm();
 }
 
 function setupMobileNav() {
@@ -178,7 +214,12 @@ function setupMobileNav() {
     }
 
     trigger.addEventListener('click', openNav);
-    if (searchBtn) searchBtn.addEventListener('click', openNav);
+    if (searchBtn) searchBtn.addEventListener('click', () => {
+        openNav();
+        setTimeout(() => {
+            overlay.querySelector('.mobile-nav-search-bar input')?.focus();
+        }, 50);
+    });
     closeBtn?.addEventListener('click', closeNav);
     backdrop?.addEventListener('click', closeNav);
 

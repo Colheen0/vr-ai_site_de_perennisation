@@ -1,0 +1,14 @@
+@import url(https://db.onlinewebfonts.com/c/0d2e0589d03cfc34ae25f7e045ec3a8f?family=SquareSerif-Demi);
+
+@font-face{
+    font-family: "SquareSerif-Demi";
+    src: url("https://db.onlinewebfonts.com/t/0d2e0589d03cfc34ae25f7e045ec3a8f.eot");
+    src: url("https://db.onlinewebfonts.com/t/0d2e0589d03cfc34ae25f7e045ec3a8f.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/0d2e0589d03cfc34ae25f7e045ec3a8f.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/0d2e0589d03cfc34ae25f7e045ec3a8f.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/0d2e0589d03cfc34ae25f7e045ec3a8f.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/0d2e0589d03cfc34ae25f7e045ec3a8f.svg#SquareSerif-Demi")format("svg");
+    font-weight:normal;
+    font-style:normal;
+    font-display:swap;
+}

@@ -1,5 +1,3 @@
-@import "variables.css";
-
 .intro_img {
     min-height: 300px;
     border-radius: var(--radius-lg);
@@ -9,13 +7,22 @@
     flex-direction: column;
     justify-content: flex-end;
     gap: var(--spacing-2);
-    background-image: 
-        linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.85) 100%), 
-        var(--intro-img);  
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: var(--text-primary); 
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .intro_img {
+    background-image:
+        linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, var(--bg-default) 100%),
+        url('/assets/img/intro_img_light.png');
+}
+
+[data-theme="dark"] .intro_img {
+    background-image:
+        linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, var(--bg-default) 100%),
+        url('/assets/img/intro_img_dark.png');
 }
 
 .intro_img h1 {
@@ -29,33 +36,53 @@
     max-width: 65ch; 
 }
 
-.info_img {
+
+.info_img_gallery {
     display: grid;
     grid-template-columns: 1fr;
-    margin: var(--spacing-2);
+    gap: var(--spacing-4);
+    margin: var(--spacing-4) 0;
     max-width: 100%;
-    padding: 0 var(--spacing-2);
 }
 
-.info_box {
-    margin: var(--spacing-2);
+.info_img {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
 }
 
 .info_img img {
     width: 100%;
     border-radius: var(--radius-lg);
-    margin: var(--spacing-2);
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
 }
 
-.info_img p {
-    margin-top: var(--spacing-2);
+.info_img figcaption {
     font-weight: 300;
     color: var(--text-secondary);
-    text-align: right;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    text-align: end;
+    justify-content: flex-end;
 }
 
 @media (min-width: 768px) {
-    .info_img {
-        grid-template-columns: 1fr 1fr;
+    .info_img_gallery:not(.info_img_gallery--single) {
+        grid-template-columns: repeat(var(--info-columns), minmax(0, 1fr));
+        align-items: start;
+    }
+
+    .info_img_gallery--single .info_img figcaption {
+        text-align: right;
+        justify-content: flex-end;
+    }
+
+    .info_img_gallery--single .info_img img {
+        max-height: 640px;
     }
 }

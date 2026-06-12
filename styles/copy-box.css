@@ -9,10 +9,6 @@
     border-radius: var(--radius-md);
 }
 
-.copy-text {
-
-}
-
 .copy-button {
     position: absolute;
     bottom: 0.75rem;
