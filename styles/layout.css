@@ -1,9 +1,12 @@
 main {
     display: flex;
     justify-content: center;
-    height: calc(100vh - 90.5px);
     overflow: hidden;
+    flex: 1;
+    height: auto;
 }
+
+
 
 .nav {
     flex: 0 0 20%;

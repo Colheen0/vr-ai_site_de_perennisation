@@ -6,6 +6,11 @@ table {
     border-collapse: collapse; 
 }
 
+table caption {
+    margin-bottom: var(--spacing-4);
+    text-align: left;
+}
+
 tr {
     font-weight: bold;
     text-align: left;

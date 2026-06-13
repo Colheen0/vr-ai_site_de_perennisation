@@ -161,22 +161,68 @@ function renderContent(blocks) {
     }
 
     const renderers = {
-        h1:    b => `<h1${b.id ? ` id="${b.id}"` : ''}>${b.text}</h1>`,
-        h2:    b => `<h2${b.id ? ` id="${b.id}"` : ''}>${b.text}</h2>`,
-        h3:    b => `<h3${b.id ? ` id="${b.id}"` : ''}>${b.text}</h3>`,
-        p:     b => `<p>${b.text}</p>`,
-        alertInfo:  b => `<span class="alert ${b.variant ?? 'info'}"><div class="icon-alert-svg"></div>${b.text}</span>`,
-        alertError: b => `<span class="alert ${b.variant ?? 'error'}"><div class="icon-alert-svg"></div>${b.text}</span>`,
+        h1:     b => `<h1${b.id ? ` id="${b.id}"` : ''}>${b.text}</h1>`,
+        h2:     b => `<h2${b.id ? ` id="${b.id}"` : ''}>${b.text}</h2>`,
+        h3:     b => `<h3${b.id ? ` id="${b.id}"` : ''}>${b.text}</h3>`,
+        p:      b => `<p>${b.text}</p>`,
+        alertInfo:  b => `<div class="alert ${b.variant ?? 'info'}"><div class="icon-alert-svg"></div><span>${b.text}</span></div>`,
+        alertError: b => `<div class="alert ${b.variant ?? 'error'}"><div class="icon-alert-svg"></div><span>${b.text}</span></div>`,
+        
         table: b => {
-            const headers = b.headers.map(h => `<th>${h}</th>`).join('');
-            const rows = b.rows.map(r => `<tr>${r.map(c => `<td>${c}</td>`).join('')}</tr>`).join('');
-            return `<table><thead><tr>${headers}</tr></thead><tbody>${rows}</tbody></table>`;
+            const headers = b.headers.map(h => `<th scope="col">${h}</th>`).join('');
+            const rows = b.rows.map(r => `<tr>${r.map(c => `<td class="general-sans-extralight">${c}</td>`).join('')}</tr>`).join('');
+            return `<table><caption class="squareserif specimen-lg">${b.caption ?? 'Liste du Matériel'}</caption><thead><tr>${headers}</tr></thead><tbody>${rows}</tbody></table>`;
         },
-        copyBox: b => `<div class="copy-box"><p class="copy-text" id="text">${b.text}</p><button onclick="copyText()" class="copy-button" aria-label="Copier"><div class="copy-logo" id="copy-logo"></div><div class="copy-logo check" id="check"></div></button></div>`,
-        introImg: b => `<div class="intro_img"><h1>${b.title}</h1>${b.description ? `<p class="text_limit">${b.description}</p>` : ''}</div>`,
-        card: b => `<div class="input"><div class="input-text"><h2>${b.title}</h2><p>${b.content}</p></div>${b.link ? `<div class="link"><a href="${b.link.href}">${b.link.label}<div class="icon-arrow-svg"></div></a></div>` : ''}</div>`,
-        cardContainer: b => `<div class="card-container">${(b.cards ?? []).map(card => `<div class="input"><div class="input-text"><h2>${card.title}</h2><p>${card.content}</p></div>${card.link ? `<div class="link"><a href="${card.link.href}">${card.link.label}<div class="icon-arrow-svg"></div></a></div>` : ''}</div>`).join('')}</div>`,
-        form: b => `<form action="${b.action ?? '#'}" method="POST" class="form" novalidate><p>${b.description ?? 'Tous les champs sont obligatoires.'}</p>${(b.fields ?? []).map(f => f.type === 'textarea' ? `<label for="${f.id}"><textarea id="${f.id}" name="${f.id}" placeholder=" " required></textarea><span>${f.label}</span></label>` : `<label for="${f.id}"><input type="${f.type ?? 'text'}" id="${f.id}" name="${f.id}" placeholder=" " required><span>${f.label}</span></label>`).join('')}<div id="errors" role="alert" aria-live="assertive" class="form-feedback"><div class="icon-alert-svg"></div><span class="feedback-text"></span></div><button class="btn" type="submit">${b.submit ?? 'Envoyer'}</button></form>`,
+        
+        copyBox: b => `
+            <div class="copy-box">
+                <p class="copy-text text_limit" id="text">${b.text}</p>
+                <button onclick="copyText()" class="copy-button"><div class="copy-logo" id="copy-logo"></div><div class="copy-logo check" id=""></div></button>
+                <p class="copy-message" id="check" aria-label="Message de confirmation">Le texte a été copié !</p>
+            </div>`,
+        
+        introImg: b => `<div class="intro_img"><h1 class="squareserif specimen-xl">${b.title}</h1>${b.description ? `<p class="text_limit">${b.description}</p>` : ''}</div>`,
+        
+        card: b => `
+            <div class="input">
+                <div class="input-text">
+                    <h2 class="squareserif">${b.title}</h2>
+                    <p class="general-sans-medium">${b.content}</p>
+                </div>
+                ${b.link ? `<div class="link"><a href="${b.link.href}">${b.link.label}<div class="icon-arrow-svg"></div></a></div>` : ''}
+            </div>`,
+        
+        cardContainer: b => `
+            <div class="card-container">
+                ${(b.cards ?? []).map(card => `
+                    <div class="input">
+                        <div class="input-text">
+                            <h2 class="squareserif">${card.title}</h2>
+                            <p class="general-sans-medium">${card.content}</p>
+                        </div>
+                        ${card.link ? `<div class="link"><a href="${card.link.href}">${card.link.label}<div class="icon-arrow-svg"></div></a></div>` : ''}
+                    </div>`).join('')}
+            </div>`,
+        
+        form: b => `
+            <form action="${b.action ?? '#'}" method="POST" class="form" novalidate>
+                <p>*Tous les champs sont obligatoires.</p>
+                ${(b.fields ?? []).map(f => f.type === 'textarea' ? 
+                    `<label for="${f.id}">
+                        <textarea id="${f.id}" name="${f.id}" placeholder=" " required></textarea>
+                        <span>${f.label}</span>
+                    </label>` : 
+                    `<label for="${f.id}">
+                        <input type="${f.type ?? 'text'}" id="${f.id}" name="${f.id}" placeholder=" " required ${f.id === 'name' ? 'autocomplete="name"' : ''} ${f.id === 'email' ? 'autocomplete="email"' : ''}>
+                        <span>${f.label}</span>
+                    </label>`
+                ).join('')}
+                <div id="errors" role="alert" aria-live="assertive" class="form-feedback">
+                    <div class="icon-alert-svg"></div>
+                    <span class="feedback-text"></span>
+                </div>
+                <button class="btn general-sans-semibold" type="submit">${b.submit ?? 'Envoyer'}</button>
+            </form>`,
     };
 
     const htmlParts = [];

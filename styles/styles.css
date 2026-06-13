@@ -34,8 +34,10 @@ body {
     padding: 0;
     margin: 0;
     position: relative;
-    overflow: hidden;
-    height: 100vh;
+    overflow: hidden; 
+    height: 100vh;    
+    display: flex;
+    flex-direction: column;
 }
 
 @media (max-width: 768px) {
@@ -50,4 +52,24 @@ body {
 
 [data-theme="dark"] .invert-on-dark {
     filter: invert(1);
+}
+
+
+h2{
+    font-family: var(--font-heading);
+    
+}
+
+.text_limit {
+    width: 55ch
+}
+
+footer {
+    border-top: 0.125rem solid var(--border-default);
+    margin-top: var(--spacing-4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.625rem;
+    gap: var(--spacing-12);
 }

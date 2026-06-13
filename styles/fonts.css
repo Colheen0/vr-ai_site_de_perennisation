@@ -12,3 +12,59 @@
     font-style:normal;
     font-display:swap;
 }
+
+.font-section {
+            margin-bottom: 3rem;
+        }
+
+        .font-label {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .font-divider {
+            border: none;
+            border-top: 1px solid var(--border-default);
+            margin-bottom: 1.5rem;
+        }
+
+        .squareserif {
+            font-family: "SquareSerif-Demi", serif;
+        }
+
+        .general-sans-extralight {
+            font-family: "General Sans Extralight", sans-serif;
+        }
+
+        .general-sans-medium {
+            font-family: "General Sans Medium", sans-serif;
+        }
+
+        .general-sans-semibold {
+            font-family: "General Sans Semibold", sans-serif;
+        }
+
+        .specimen-xxl  { font-size: 3rem;    line-height: 1.1; }
+        .specimen-xl  { font-size: 2.5rem;   line-height: 1.2; }
+        .specimen-lg  { font-size: 2rem;    line-height: 1.2; }
+        .specimen-md  { font-size: 1.25rem; line-height: 1.4; }
+        .specimen-sm  { font-size: 1rem;    line-height: 1.5; }
+        .specimen-xs  { font-size: 0.875rem; line-height: 1.5; }
+
+        .row {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .size-label {
+            font-family: "General Sans Medium", sans-serif;
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            min-width: 3rem;
+        }

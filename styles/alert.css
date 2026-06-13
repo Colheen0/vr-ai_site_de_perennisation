@@ -1,8 +1,8 @@
-@import"variables.css";
+@import"variable.css";
 
 .alert {
     display: flex;
-    align-items: start;
+    align-items: center;
     padding: var(--spacing-4);
     margin: var(--spacing-4);
     border-radius: var(--radius-md);
@@ -15,17 +15,16 @@
 }
 
 .icon-alert-svg {
-    height: 1.5rem;
-    width: 1.5rem;
-    -webkit-mask-image: url('../assets/svg/alert.svg');
-    mask-image: url('../assets/svg/alert.svg');
+    height: var(--spacing-6);
+    width: var(--spacing-6);
+    -webkit-mask-image: url('/assets/svg/alert.svg');
+    mask-image: url('/assets/svg/alert.svg');
     -webkit-mask-size: contain;
     mask-size: contain;
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     transition: background-color 0.3s ease;
-    margin-right: 0.8rem;
-    margin-top: 0.25rem;
+    margin-right: var(--spacing-2);
 }
 
 .info .icon-alert-svg {
@@ -44,6 +43,6 @@
 }
 
 .error img {
-    margin-right: 0.8rem;
+    margin-right: var(--spacing-2);
     color: var(--error-bg);
 }
