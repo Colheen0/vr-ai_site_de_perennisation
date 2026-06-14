@@ -117,9 +117,10 @@
     <header class="desktop-only">
         <a class="logo" href="index.html"><img src="assets/svg/logoMetfordTigers.svg" alt="Accueil Metford Tigers"></a>
         <div class="search-wrapper">
+            <label class="visually-hidden" for="site-search">Rechercher</label>
             <div class="search-bar">
                 <img class="invert-on-dark" src="assets/svg/iconSearch.svg" alt="">
-                <input type="search" placeholder="Rechercher" autocomplete="off">
+                <input id="site-search" type="search" autocomplete="off">
                 <div class="search-shortcuts" data-tooltip="CTRL + K pour focus la barre de recherche">
                     <kbd class="shortcut-mac" hidden>⌘</kbd>
                     <kbd class="shortcut-ctrl">CTRL</kbd>
@@ -180,9 +181,10 @@
                 </button>
             </div>
             <div class="mobile-nav-search-wrapper">
+                <label class="visually-hidden" for="mobile-site-search">Rechercher</label>
                 <div class="mobile-nav-search-bar">
                     <img class="invert-on-dark" src="assets/svg/iconSearch.svg" alt="">
-                    <input type="search" placeholder="Rechercher" autocomplete="off">
+                    <input id="mobile-site-search" type="search" autocomplete="off">
                 </div>
                 <div class="mobile-search-results" hidden></div>
             </div>
