@@ -55,18 +55,26 @@ function renderNav(nav, activePageId) {
 
     let html = '';
     let breadcrumb = null;
+    let groupIdCounter = 0;
 
     for (const link of nav.links ?? []) {
         const active = isActive(link);
-        html += `<a href="${link.href}" class="nav-link${active ? ' active' : ''}">${link.label}</a>`;
+        // 🌟 Ajout de aria-current="page" si le lien est actif
+        html += `<a href="${link.href}" class="nav-link${active ? ' active' : ''}" ${active ? 'aria-current="page"' : ''}>${link.label}</a>`;
         if (active && !breadcrumb) breadcrumb = { label: link.label };
     }
 
     for (const group of nav.groups ?? []) {
-        html += `<div class="nav-group"><p class="nav-group-title">${group.title}</p><ul>`;
+        groupIdCounter++;
+        const groupId = `nav-group-title-${groupIdCounter}`;
+        
+        html += `<div class="nav-group">
+            <h2 class="nav-group-title" id="${groupId}">${group.title}</h2>
+            <ul aria-labelledby="${groupId}">`;
+            
         for (const link of group.links) {
             const active = isActive(link);
-            html += `<li><a href="${link.href}" class="nav-link${active ? ' active' : ''}">${link.label}</a></li>`;
+            html += `<li><a href="${link.href}" class="nav-link${active ? ' active' : ''}" ${active ? 'aria-current="page"' : ''}>${link.label}</a></li>`;
             if (active && !breadcrumb) breadcrumb = { group: group.title, label: link.label };
         }
         html += `</ul></div>`;
@@ -169,7 +177,7 @@ function renderContent(blocks) {
         alertError: b => `<div class="alert ${b.variant ?? 'error'}"><div class="icon-alert-svg"></div><span>${b.text}</span></div>`,
         
         table: b => {
-            const headers = b.headers.map(h => `<th scope="col">${h}</th>`).join('');
+            const headers = b.headers.map(h => `<th scope="col(5.7)">${h}</th>`).join('');
             const rows = b.rows.map(r => `<tr>${r.map(c => `<td class="general-sans-extralight">${c}</td>`).join('')}</tr>`).join('');
             return `<table><caption class="squareserif specimen-lg">${b.caption ?? 'Liste du Matériel'}</caption><thead><tr>${headers}</tr></thead><tbody>${rows}</tbody></table>`;
         },
@@ -177,8 +185,8 @@ function renderContent(blocks) {
         copyBox: b => `
             <div class="copy-box">
                 <p class="copy-text text_limit" id="text">${b.text}</p>
-                <button onclick="copyText()" class="copy-button"><div class="copy-logo" id="copy-logo"></div><div class="copy-logo check" id=""></div></button>
-                <p class="copy-message" id="check" aria-label="Message de confirmation">Le texte a été copié !</p>
+                <button onclick="copyText()" class="copy-button" aria-label="Copier le texte d'exemple"><div class="copy-logo" id="copy-logo"></div><div class="copy-logo check" id=""></div></button>
+                <p class="copy-message" id="check" aria-label="Message de confirmation" aria-live="polite" style="display:none;">Le texte a été copié !</p>
             </div>`,
         
         introImg: b => `<div class="intro_img"><h1 class="squareserif specimen-xl">${b.title}</h1>${b.description ? `<p class="text_limit">${b.description}</p>` : ''}</div>`,
@@ -254,6 +262,14 @@ function renderContent(blocks) {
     }
 
     if (typeof initForm === 'function') initForm();
+
+    const tocLinks = document.querySelectorAll('.toc-link');
+    tocLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            tocLinks.forEach(l => l.removeAttribute('aria-current'));
+            link.setAttribute('aria-current', 'location');
+        });
+    });
 }
 
 function setupMobileNav() {
