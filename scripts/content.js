@@ -213,7 +213,7 @@ function renderContent(blocks) {
                         <span>${f.label}</span>
                     </label>` : 
                     `<label for="${f.id}">
-                        <input type="${f.type ?? 'text'}" id="${f.id}" name="${f.id}" placeholder=" " required ${f.id === 'name' ? 'autocomplete="name"' : ''} ${f.id === 'email' ? 'autocomplete="email"' : ''}>
+                        <input type="${f.type ?? 'text'}" id="${f.id}" name="${f.id}" placeholder=" " required ${f.autocomplete ? `autocomplete="${f.autocomplete}"` : (f.id === 'name' ? 'autocomplete="name"' : f.id === 'email' ? 'autocomplete="email"' : '')}>
                         <span>${f.label}</span>
                     </label>`
                 ).join('')}

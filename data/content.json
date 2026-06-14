@@ -327,12 +327,14 @@
                         {
                             "id": "name",
                             "type": "text",
-                            "label": "Nom"
+                            "label": "NOM et Prénom",
+                            "autocomplete": "name"
                         },
                         {
                             "id": "email",
                             "type": "email",
-                            "label": "Email"
+                            "label": "Email",
+                            "autocomplete": "email"
                         },
                         {
                             "id": "subject",
