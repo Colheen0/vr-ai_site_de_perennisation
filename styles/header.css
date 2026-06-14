@@ -61,8 +61,14 @@ header {
 
     .logo {
         display: flex;
-        width: 100px;
         margin-left: 3px;
+        position: relative;
+
+        img{
+            width: 120px;
+            position: relative;
+            top: 5px;
+        }
     }
 
     .search-wrapper {
@@ -300,9 +306,12 @@ header {
     }
 
     .mobile-header-top .logo {
-        width: 100px;
         display: flex;
         flex-shrink: 0;
+
+        img{
+            width: 120px;
+        }
     }
 
     .mobile-header-help {
