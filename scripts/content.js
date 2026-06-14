@@ -191,26 +191,42 @@ function renderContent(blocks) {
         
         introImg: b => `<div class="intro_img"><h1 class="squareserif specimen-xl">${b.title}</h1>${b.description ? `<p class="text_limit">${b.description}</p>` : ''}</div>`,
         
-        card: b => `
-            <div class="input">
-                <div class="input-text">
-                    <h2 class="squareserif">${b.title}</h2>
-                    <p class="general-sans-medium">${b.content}</p>
-                </div>
-                ${b.link ? `<div class="link"><a href="${b.link.href}">${b.link.label}<div class="icon-arrow-svg"></div></a></div>` : ''}
-            </div>`,
+        card: (b, index) => {
+            const cardId = `card-title-single-${Math.random().toString(36).substr(2, 9)}`;
+            return `
+                <div class="input">
+                    <div class="input-text">
+                        <h2 class="squareserif" id="${cardId}">${b.title}</h2>
+                        <p class="general-sans-medium">${b.content}</p>
+                    </div>
+                    ${b.link ? `<div class="link"><a href="${b.link.href}" aria-labelledby="${cardId} ${cardId}-link-text" id="${cardId}-link-text">${b.link.label}</a><div class="icon-arrow-svg"></div></div>` : ''}
+                </div>`;
+        },
         
-        cardContainer: b => `
-            <div class="card-container">
-                ${(b.cards ?? []).map(card => `
-                    <div class="input">
-                        <div class="input-text">
-                            <h2 class="squareserif">${card.title}</h2>
-                            <p class="general-sans-medium">${card.content}</p>
-                        </div>
-                        ${card.link ? `<div class="link"><a href="${card.link.href}">${card.link.label}<div class="icon-arrow-svg"></div></a></div>` : ''}
-                    </div>`).join('')}
-            </div>`,
+        cardContainer: b => {
+            let containerIdCounter = 0;
+            return `
+                <div class="card-container">
+                    ${(b.cards ?? []).map(card => {
+                        containerIdCounter++;
+                        const cardId = `card-title-${containerIdCounter}-${Math.floor(Math.random() * 1000)}`;
+                        return `
+                        <div class="input">
+                            <div class="input-text">
+                                <h2 class="squareserif" id="${cardId}">${card.title}</h2>
+                                <p class="general-sans-medium">${card.content}</p>
+                            </div>
+                            ${card.link ? `
+                            <div class="link">
+                                <a href="${card.link.href}" aria-labelledby="${cardId} ${cardId}-link-text" id="${cardId}-link-text">
+                                    ${card.link.label}
+                                    <div class="icon-arrow-svg"></div>
+                                </a>
+                            </div>` : ''}
+                        </div>`;
+                    }).join('')}
+                </div>`;
+        },
         
         form: b => `
             <form action="${b.action ?? '#'}" method="POST" class="form" novalidate>
