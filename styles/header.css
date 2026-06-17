@@ -5,25 +5,6 @@
     width: 100%;
     pointer-events: none;
     z-index: -1;
-
-    .highlight-left {
-        display: block;
-    }
-
-    .highlight-middle {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .highlight-right {
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
 }
 
 .header-background {
@@ -37,8 +18,17 @@
     pointer-events: none;
 }
 
+/* Icônes theme toggle : soleil masqué en mode light, lune masquée en mode dark */
 .icon-theme-sun {
     display: none;
+    width: 19px;
+    height: 19px;
+}
+
+.icon-theme-moon {
+    display: block;
+    width: 13px;
+    height: 13px;
 }
 
 [data-theme="dark"] .icon-theme-sun {
@@ -49,6 +39,13 @@
     display: none;
 }
 
+/* Les SVG utilisent currentColor via fill — les <img> ont besoin d'un filtre CSS */
+[data-theme-toggle] .icon-theme-sun,
+[data-theme-toggle] .icon-theme-moon {
+    filter: invert(0);
+    /* En dark mode, invert-on-dark s'applique déjà globalement */
+}
+
 header {
     display: flex;
     padding: var(--spacing-6) var(--spacing-12);
@@ -57,14 +54,20 @@ header {
     border-bottom: 1px solid var(--border-default);
     position: sticky;
     top: 0;
+<<<<<<< HEAD
+    z-index: 10;
+    width: 100%;
+=======
+    background-color: var(--bg-default);
     z-index: 2;
+>>>>>>> 3be81208097a266714c635d29240c7c4b314cab2
 
     .logo {
         display: flex;
         margin-left: 3px;
         position: relative;
 
-        img{
+        img {
             width: 120px;
             position: relative;
             top: 5px;
@@ -104,15 +107,11 @@ header {
     .search-bar input::-webkit-search-cancel-button {
         -webkit-appearance: none;
         cursor: pointer;
-        height: 13px;
-        width: 13px;
+        height: 0.75rem;
+        width: 0.75rem;
         background-image: url("../assets/svg/iconCancelSearch.svg");
         background-repeat: no-repeat;
         background-size: contain;
-    }
-
-    [data-theme="dark"] .search-bar input::-webkit-search-cancel-button {
-        filter: invert(1);
     }
 
     .search-bar img {
@@ -210,6 +209,24 @@ header {
         box-sizing: border-box;
     }
 
+    .search-results::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    .search-results::-webkit-scrollbar-track {
+        background: none;
+        margin: 5px;
+    }
+
+    .search-results::-webkit-scrollbar-thumb {
+        background: var(--primary-color);
+        border-radius: 2px;
+    }
+
+    .search-results::-webkit-scrollbar-thumb:hover {
+        background: var(--primary-color-hover);
+    }
+
     .search-wrapper:has(input:focus) .search-results {
         border-color: var(--primary-color);
         box-shadow: 0 0 0 1px var(--primary-color);
@@ -255,36 +272,17 @@ header {
     }
 }
 
+header.desktop-only {
+<<<<<<< HEAD
+=======
+    width: min(100%, 1680px);
+>>>>>>> 3be81208097a266714c635d29240c7c4b314cab2
+    margin-inline: auto;
+    box-sizing: border-box;
+}
+
 
 @media (max-width: 768px) {
-    .highlights.mobile-only {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        pointer-events: none;
-        z-index: -1;
-    }
-
-    .highlights.mobile-only .highlight-left {
-        display: block;
-    }
-
-    .highlights.mobile-only .highlight-middle {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .highlights.mobile-only .highlight-right {
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-
     header.mobile-only {
         display: flex;
         flex-direction: column;
@@ -294,30 +292,29 @@ header {
         position: sticky;
         top: 0;
         z-index: 10;
-        background-color: transparent;
     }
 
     .mobile-header-top {
-        width: calc(100% - 2 * var(--spacing-4));
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: var(--spacing-4);
+        box-sizing: border-box;
     }
 
-    .mobile-header-top .logo {
-        display: flex;
-        flex-shrink: 0;
-
-        img{
-            width: 120px;
-        }
+    .mobile-header-top .logo img {
+        width: 120px;
     }
 
     .mobile-header-help {
         display: flex;
         align-items: center;
         gap: var(--spacing-2);
+    }
+
+    .mobile-header-help img {
+        height: 1.25rem;
     }
 
     .mobile-help-btn {
@@ -328,7 +325,6 @@ header {
         text-decoration: none;
         padding: var(--spacing-2);
         border-radius: var(--spacing-1);
-        corner-shape: squircle;
     }
 
     .mobile-help-btn:hover {
@@ -341,7 +337,6 @@ header {
         cursor: pointer;
         padding: var(--spacing-2);
         border-radius: var(--spacing-1);
-        corner-shape: squircle;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -352,38 +347,63 @@ header {
         background-color: var(--input-shortcut);
     }
 
-    .mobile-header-help img {
+    /* Bouton burger dans le header — sticky grâce au header */
+    .mobile-burger-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: var(--spacing-2);
+        border-radius: var(--spacing-1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-primary);
+        gap: var(--spacing-2);
+    }
+
+    .mobile-burger-btn:hover {
+        background-color: var(--input-shortcut);
+    }
+
+    .mobile-burger-btn img {
+        width: 1.25rem;
         height: 1.25rem;
     }
 
-    .mobile-breadcrumb-bar {
-        width: fit-content;
-        padding: var(--spacing-4);
-        padding-top: var(--spacing-2);
-        display: flex;
-        justify-content: center;
-        gap: var(--spacing-2);
-        border: none;
-        background: none;
-        cursor: pointer;
-
-        img{
-            width: 1rem;
-        }
+    .highlights.mobile-only {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 401px;
+        pointer-events: none;
+        z-index: -1;
+        overflow: hidden;
+        /* 3 dégradés radiaux qui remplacent les 3 SVG d'ellipses floutées */
+        background-image:
+            radial-gradient(ellipse 269px 400px at -73px -99px, var(--gradient-3), transparent 70%),
+            radial-gradient(ellipse 358px 400px at 50% -149px, var(--gradient-2), transparent 70%),
+            radial-gradient(ellipse 257px 400px at calc(100% + 100px) -99px, var(--gradient-1), transparent 70%);
     }
+
+
+
+
+
+
+
+
+
+
 
     .mobile-nav-search-bar input::-webkit-search-cancel-button {
         -webkit-appearance: none;
         cursor: pointer;
-        height: 13px;
-        width: 13px;
+        height: 0.75rem;
+        width: 0.75rem;
         background-image: url("../assets/svg/iconCancelSearch.svg");
         background-repeat: no-repeat;
         background-size: contain;
-    }
-
-    [data-theme="dark"] .mobile-nav-search-bar input::-webkit-search-cancel-button {
-        filter: invert(1);
     }
 
     .mobile-nav-search-wrapper:has(.mobile-search-results:not([hidden])) .mobile-nav-search-bar {
@@ -391,4 +411,9 @@ header {
         border-bottom-right-radius: 0;
     }
 
-}   
+}
+
+:root[data-theme="dark"] header .search-bar input::-webkit-search-cancel-button,
+:root[data-theme="dark"] .mobile-nav-search-bar input::-webkit-search-cancel-button {
+    background-image: url("../assets/svg/iconCancelSearch-dark.svg");
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page layout template</title>
+    <link rel="icon" type="image/svg+xml" href="assets/svg/tiger_head_logo.svg">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,600&display=swap" rel="stylesheet">
+    <script>
+        (function() {
+            var t = localStorage.getItem('theme');
+            if (t) document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
+</head>
+
+<body data-page="mecaniques">
+
+<div class="ellipses-container" aria-hidden="true">
+    <div class="ellipse-4"></div>
+    <div class="ellipse-5"></div>
+    <div class="ellipse-6"></div>
+</div>
+
+    <nav class="skip-links" aria-label="Accès rapide">
+        <a href="#site-nav">Aller à la navigation</a>
+        <a href="#page-content">Aller au contenu</a>
+        <a href="#page-toc">Aller au sommaire</a>
+    </nav>
+
+    <!-- Dégradés mobile : rendus via CSS, plus de SVG inline -->
+    <span class="highlights mobile-only" aria-hidden="true"></span>
+
+    <span class="header-background desktop-only"></span>
+
+    <!-- Header desktop -->
+    <header class="desktop-only">
+        <a class="logo" href="index.html">
+            <img src="assets/svg/logoMetfordTigers.svg" alt="Accueil Metford Tigers">
+        </a>
+        <div class="search-wrapper">
+            <label class="visually-hidden" for="site-search">Rechercher</label>
+            <div class="search-bar">
+                <img class="invert-on-dark" src="assets/svg/iconSearch.svg" alt="">
+                <input id="site-search" type="search" autocomplete="off" placeholder="Rechercher…" aria-label="Rechercher dans le site">
+                <div class="search-shortcuts" data-tooltip="CTRL + K pour focus la barre de recherche">
+                    <kbd class="shortcut-mac" hidden>⌘</kbd>
+                    <kbd class="shortcut-ctrl">CTRL</kbd>
+                    <kbd>K</kbd>
+                </div>
+            </div>
+            <div class="search-results" hidden></div>
+        </div>
+        <span class="header-help">
+            <a href="support.html">Support</a>
+            <button data-theme-toggle aria-pressed="false" aria-label="Passer au mode sombre">
+                <img class="icon-theme-sun invert-on-dark" src="assets/svg/iconSun.svg" alt="">
+                <img class="icon-theme-moon invert-on-dark" src="assets/svg/iconMoon.svg" alt="">
+            </button>
+        </span>
+    </header>
+
+    <!-- Header mobile -->
+    <header class="mobile-only">
+        <div class="mobile-header-top">
+            <a class="logo" href="index.html">
+                <img src="assets/svg/logoMetfordTigers.svg" alt="Accueil Metford Tigers">
+            </a>
+            <div class="mobile-header-help">
+                <button class="mobile-search-btn" id="mobile-search-open" aria-label="Rechercher">
+                    <img class="invert-on-dark" src="assets/svg/iconSearch.svg" alt="">
+                </button>
+                <a class="mobile-help-btn" href="support.html" aria-label="Aide">
+                    <img class="invert-on-dark" src="assets/svg/iconHelp.svg" alt="">
+                </a>
+
+            </div>
+        </div>
+        <div class="mobile-header-breadcrumb">
+            <button class="mobile-burger-btn" id="mobile-nav-trigger" aria-expanded="false"
+                aria-label="Ouvrir la navigation">
+                <img class="invert-on-dark" src="assets/svg/iconBurger.svg" alt=""><span class="mobile-breadcrumb-text" aria-current="page"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Navigation mobile (overlay) -->
+    <!-- Navigation mobile (overlay) -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay" hidden>
+        <div class="mobile-nav-panel">
+            <div class="mobile-nav-panel-header">
+                <button class="mobile-nav-close" aria-label="Fermer la navigation">
+                    <img class="invert-on-dark" src="assets/svg/iconCollapse.svg" alt="">
+                </button>
+                <button data-theme-toggle aria-pressed="false" aria-label="Passer au mode sombre">
+                    <img class="icon-theme-sun invert-on-dark" src="assets/svg/iconSun.svg" alt="">
+                    <img class="icon-theme-moon invert-on-dark" src="assets/svg/iconMoon.svg" alt="">
+                </button>
+            </div>
+            <div class="mobile-nav-search-wrapper">
+                <label class="visually-hidden" for="mobile-site-search">Rechercher</label>
+                <div class="mobile-nav-search-bar">
+                    <img class="invert-on-dark" src="assets/svg/iconSearch.svg" alt="">
+                    <input id="mobile-site-search" type="search" autocomplete="off" placeholder="Rechercher…" aria-label="Rechercher dans le site">
+                </div>
+                <div class="mobile-search-results" hidden></div>
+            </div>
+            <div class="mobile-nav-content">
+                <nav class="mobile-nav-list"></nav>
+            </div>
+        </div>
+        <button class="mobile-nav-backdrop" aria-label="Fermer la navigation" tabindex="-1"></button>
+    </div>
+
+    <main>
+        <section class="nav" id="site-nav" tabindex="-1">
+            <nav></nav>
+        </section>
+        <div class="main-right">
+            <div class="mobile-toc-header mobile-only">
+                <button class="mobile-toc-btn" aria-label="Table des matières" aria-expanded="false">
+                    <img class="invert-on-dark" src="assets/svg/iconToc.svg" alt="">
+                </button>
+                <div class="mobile-toc-popup" hidden>
+                    <p class="toc-popup-title">Sur cette page</p>
+                    <ul class="mobile-toc-list"></ul>
+                </div>
+            </div>
+            <div class="main-columns">
+                <section class="content" id="page-content" tabindex="-1">
+                </section>
+                <section class="toc" id="page-toc" tabindex="-1">
+                    <p class="toc-title">
+                        <img class="invert-on-dark" src="assets/svg/iconToc.svg" alt="" aria-hidden="true">
+                        Sur cette page
+                    </p>
+                    <ul></ul>
+                </section>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="scripts/theme-toggle.js"></script>
+    <script src="scripts/content.js"></script>
+    <script src="scripts/error-message.js"></script>
+    <script src="scripts/copy.js"></script>
+    <script src="scripts/os-shortcuts.js"></script>
+    <script src="scripts/search.js"></script>
+</body>
+
+</html>

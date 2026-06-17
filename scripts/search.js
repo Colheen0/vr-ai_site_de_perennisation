@@ -19,7 +19,11 @@
     }
 
     function safePath(href) {
-        return /^\/[\w\-./]*$/.test(href) ? href : '#';
+        if (!href) return '#';
+        // Construit un chemin absolu à partir de l'origine de la page courante
+        const base = window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1);
+        const filename = href.replace(/^\//, '').split('/').pop();
+        return base + filename;
     }
 
     function renderResults(results, resultsEl) {

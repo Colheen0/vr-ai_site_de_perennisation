@@ -1,0 +1,94 @@
+{
+    "title": "Démarrer l'enquête VR-AI",
+    "toc": [
+        { "href": "#etapes", "label": "Étapes du lancement" }
+    ],
+    "content": [
+        { "type": "h1", "id": "titre", "text": "Démarrer l'enquête" },
+        { "type": "p", "text": "Le lancement de l'atelier est une étape clé." },
+        { "type": "p", "text": "Il permet d'installer l'ambiance, de capter l'attention des élèves et de poser les bases de l'enquête." },
+        { "type": "h2", "id": "etapes", "text": "Étapes du lancement" },
+        { 
+            "type": "steps",
+            "startAt": 1,
+            "items": [
+                {
+                    "title": "Installer les élèves",
+                    "body": [
+                        "Accueillez les élèves and installez-les dans la salle.",
+                        "Si vous utilisez un icebreaker, c'est le moment de le proposer pour créer une première dynamique de groupe."
+                    ]
+                },
+                {
+                    "title": "Introduire la situation",
+                    "body": [
+                        "Expliquez brièvement le contexte :",
+                        "Les sujets du brevet ont disparu et un élève, <strong>Eden</strong>, est accusé.",
+                        "Restez volontairement vague pour ne pas donner trop d'informations dès le départ."
+                    ]
+                },
+                {
+                    "title": "Diffuser la vidéo",
+                    "body": [
+                        "Lancez la vidéo de surveillance.",
+                        "Cette vidéo constitue la première preuve présentée aux élèves."
+                    ]
+                }
+            ]
+        },
+        { 
+            "type": "youtube", 
+            "url": "https://www.youtube.com/embed/D-2lNE5KfPA", 
+            "transcriptLabel": "Dérouler pour voir la transcription",
+            "transcript": [
+                "Bon là faut écrire la transcription de la vidéo",
+                "C'est pas fait encore, mais ça va venir"
+            ]
+        },
+        { 
+            "type": "steps",
+            "startAt": 4,
+            "items": [
+                {
+                    "title": "Créer une rupture",
+                    "body": [
+                        "À la fin de la vidéo, un adulte (ou l'animateur) intervient en incarnant le rôle du <strong>surveillant</strong>.",
+                        "Il annonce qu'il faut agir rapidement et décide de séparer les élèves en deux groupes.",
+                        "Cette intervention permet de :"
+                    ],
+                    "extraList": ["renforcer l'immersion", "créer un effet de surprise", "lancer réellement l'enquête"]
+                }
+            ]
+        },
+        { "type": "alertInfo", "text": "Le jeu de rôle n'a pas besoin d'être théâtral. Une intervention simple suffit à créer l'immersion." },
+        { 
+            "type": "steps",
+            "startAt": 5,
+            "items": [
+                {
+                    "title": "Diviser les groupes",
+                    "body": [
+                        "Séparez la classe en deux groupes de manière simple.",
+                        "Chaque groupe est ensuite dirigé vers un espace différent.",
+                        "→ chaque groupe reçoit une partie des indices",
+                        "→ aucun groupe ne possède toutes les informations"
+                    ]
+                },
+                {
+                    "title": "Lancer l'enquête",
+                    "body": [
+                        "Une fois les groupes installés, distribuez les premiers éléments.",
+                        "Les élèves peuvent commencer à observer, analyser et échanger.",
+                        "L'enquête est maintenant en cours."
+                    ]
+                }
+            ]
+        },
+        { "type": "alertError", "text": "Évitez de trop expliquer au départ. Les élèves doivent découvrir par eux-mêmes." },
+        { 
+            "type": "pageNav",
+            "prev": { "href": "materiel.html", "label": "Matériel de VR-AI" },
+            "next": { "href": "enquete-1.html", "label": "Enquête (phase 1) de VR-AI" }
+        }
+    ]
+}

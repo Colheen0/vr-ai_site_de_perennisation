@@ -1,0 +1,127 @@
+{
+    "title": "Résolution de VR-AI",
+    "toc": [
+        {
+            "href": "#deroulement",
+            "label": "Déroulé de la phase"
+        },
+        {
+            "href": "#conclusion",
+            "label": "Une conclusion qui fait réfléchir"
+        }
+    ],
+    "content": [
+        {
+            "type": "h1",
+            "id": "titre",
+            "text": "Le moment de bascule"
+        },
+        {
+            "type": "p",
+            "text": "Après avoir identifié plusieurs incohérences, les élèves disposent désormais de suffisamment d'indices pour avancer."
+        },
+        {
+            "type": "p",
+            "text": "Un second code est découvert, permettant d'accéder à la dernière étape de l'enquête."
+        },
+        {
+            "type": "h2",
+            "id": "deroulement",
+            "text": "Déroulé de la phase"
+        },
+        {
+            "type": "steps",
+            "items": [
+                {
+                    "title": "Accéder au bureau du directeur",
+                    "body": [
+                        "Une fois le deuxième code trouvé, l'animateur (ou le surveillant) intervient à nouveau.",
+                        "Il annonce que le bureau du directeur est accessible et propose aux élèves d'y aller pour chercher de nouveaux indices.",
+                        "Les élèves sont alors regroupés dans un même espace."
+                    ]
+                },
+                {
+                    "title": "Explorer l'ordinateur",
+                    "body": [
+                        "Dans le bureau, un ordinateur est laissé allumé.",
+                        "Les élèves peuvent accéder au système de surveillance en utilisant les deux codes trouvés précédemment (login et mot de passe).",
+                        "Ils découvrent alors différents éléments liés à l'enquête."
+                    ],
+                    "img": {
+                        "src": "../../assets/img/explorer-lordinateur.png",
+                        "alt": "Page de connexion au système de vidéo-surveillance",
+                        "caption": "Page de connexion au système de vidéo-surveillance."
+                    }
+                },
+                {
+                    "title": "Découvrir la vidéo originale",
+                    "body": [
+                        "En explorant le système, les élèves trouvent la vidéo originale dans la corbeille.",
+                        "Cette vidéo montre une version différente des faits.",
+                        "Ils découvrent que le coupable n'est pas Eden, mais le <strong>surveillant</strong>."
+                    ],
+                    "alert": {
+                        "type": "info",
+                        "text": "La découverte doit venir des élèves. L’animateur guide sans donner directement la réponse."
+                    }
+                },
+                {
+                    "title": "Comprendre la manipulation",
+                    "body": [
+                        "Les élèves réalisent que les images présentées au début de l'enquête ont été <strong>modifiées</strong>.",
+                        "Les incohérences qu'ils ont repérées prennent alors tout leur sens.",
+                        "Ils comprennent que les preuves initiales étaient trompeuses."
+                    ]
+                },
+                {
+                    "title": "Faire face à l'accusation",
+                    "body": [
+                        "Au moment de la découverte, le surveillant revient accompagné du directeur.",
+                        "Il accuse les élèves d'avoir fouillé sans autorisation.",
+                        "Les élèves doivent alors présenter leurs preuves pour défendre leur conclusion."
+                    ],
+                    "alert": {
+                        "type": "error",
+                        "text": "Certains élèves peuvent douter de leur conclusion. Encouragez-les à s'appuyer sur les preuves qu'ils ont construites."
+                    }
+                },
+                {
+                    "title": "Révéler la vérité",
+                    "body": [
+                        "En présentant la vidéo originale, les élèves prouvent l'innocence d'Eden.",
+                        "Le surveillant est identifié comme le véritable coupable.",
+                        "L'enquête est résolue."
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "h2",
+            "id": "conclusion",
+            "text": "Une conclusion qui fait réfléchir"
+        },
+        {
+            "type": "p",
+            "text": "Cette phase permet de faire le lien entre le jeu et les objectifs pédagogiques."
+        },
+        {
+            "type": "p",
+            "text": "Les élèves comprennent que ce qu'ils ont vu au début n'était pas fiable."
+        },
+        {
+            "type": "p",
+            "text": "Ils réalisent que les images peuvent être manipulées, et que seule une analyse attentive permet de s'en rendre compte."
+        },
+        {
+            "type": "pageNav",
+            "prev": {
+                "href": "enquete-1.html",
+                "label": "Enquête de VR-AI"
+            },
+            "next": {
+                "href": "debrief.html",
+                "label": "Débrief de VR-AI"
+            }
+        }
+    ]
+}

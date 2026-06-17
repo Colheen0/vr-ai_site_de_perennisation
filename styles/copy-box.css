@@ -21,8 +21,8 @@
 .copy-logo{
     height: var(--spacing-4);
     width: var(--spacing-4);
-    -webkit-mask-image: url('/assets/svg/copy.svg');
-    mask-image: url('/assets/svg/copy.svg');
+    -webkit-mask-image: url('../assets/svg/copy.svg');
+    mask-image: url('../assets/svg/copy.svg');
     -webkit-mask-size: contain;
     mask-size: contain;
     -webkit-mask-repeat: no-repeat;
@@ -33,8 +33,8 @@
 }
 
 .check {
-    -webkit-mask-image: url('/assets/svg/check.svg');
-    mask-image: url('/assets/svg/check.svg');
+    -webkit-mask-image: url('../assets/svg/check.svg');
+    mask-image: url('../assets/svg/check.svg');
     display: none;
 }
 

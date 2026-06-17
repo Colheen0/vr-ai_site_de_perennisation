@@ -1,0 +1,186 @@
+{
+    "title": "Créer ses preuves pour VR-AI",
+    "toc": [
+        {
+            "href": "#demarche",
+            "label": "Une démarche en plusieurs étapes"
+        },
+        {
+            "href": "#scenario",
+            "label": "Définir le scénario"
+        },
+        {
+            "href": "#erreurs",
+            "label": "Identifier les erreurs à intégrer"
+        },
+        {
+            "href": "#originale",
+            "label": "Créer une version originale"
+        },
+        {
+            "href": "#modifiees",
+            "label": "Générer les images modifiées"
+        },
+        {
+            "href": "#captures",
+            "label": "Sélectionner les captures"
+        },
+        {
+            "href": "#supports",
+            "label": "Préparer les supports"
+        }
+    ],
+    "content": [
+        {
+            "type": "h1",
+            "id": "titre",
+            "text": "Reproduire les éléments de l'enquête"
+        },
+        {
+            "type": "p",
+            "text": "L'atelier VR-AI repose sur des preuves volontairement manipulées."
+        },
+        {
+            "type": "p",
+            "text": "Pour adapter ou recréer l'atelier, il est possible de produire ses propres images en suivant une démarche simple."
+        },
+        {
+            "type": "p",
+            "text": "L'objectif n'est pas de créer des images parfaites, mais de générer des contenus dans lesquels les élèves pourront repérer des <strong>incohérences</strong>."
+        },
+        {
+            "type": "h2",
+            "id": "demarche",
+            "text": "Une démarche en plusieurs étapes"
+        },
+        {
+            "type": "steps",
+            "startAt": 1,
+            "items": [
+                {
+                    "title": "Définir le scénario",
+                    "body": [
+                        "Commencez par imaginer une situation simple.",
+                        "Qui est impliqué ? Que s'est-il passé ? Quel est l'élément à remettre en question ?",
+                        "Le scénario doit rester clair pour que les élèves puissent suivre l'enquête."
+                    ]
+                },
+                {
+                    "title": "Identifier les erreurs à intégrer",
+                    "body": [
+                        "Réfléchissez aux incohérences que vous souhaitez faire apparaître dans les images.",
+                        "Par exemple :",
+                        "proportions incorrectes, objets mal positionnés, éléments incohérents avec le contexte.",
+                        "Ces erreurs doivent être <strong>subtiles mais repérables</strong>."
+                    ]
+                },
+                {
+                    "title": "Créer une version originale",
+                    "body": [
+                        "Réalisez une version \"réelle\" de la scène.",
+                        "Cela peut être une photo ou une courte vidéo.",
+                        "Cette version servira de base pour générer les preuves modifiées."
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "img_content",
+            "src": "../../assets/img/vrai_vol.png",
+            "ratio": "4/3",
+            "caption": "Version originale de la scène"
+        },
+        {
+            "type": "steps",
+            "startAt": 4,
+            "items": [
+                {
+                    "title": "Générer les images modifiées",
+                    "body": [
+                        "Utilisez un outil d'intelligence artificielle pour transformer la scène.",
+                        "L'objectif est de remplacer certains éléments ou d'ajouter des détails tout en conservant une apparence crédible."
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "img_content",
+            "src": "../../assets/img/avant_apres.jpg",
+            "ratio": "16/9",
+            "caption": "AVANT (gauche) — APRÈS modification IA (droite)"
+        },
+        {
+            "type": "steps",
+            "startAt": 5,
+            "items": [
+                {
+                    "title": "Sélectionner les captures",
+                    "body": [
+                        "Choisissez les moments les plus intéressants pour créer vos preuves.",
+                        "Ces images doivent contenir les erreurs que les élèves devront identifier."
+                    ]
+                },
+                {
+                    "title": "Préparer les supports",
+                    "body": [
+                        "Imprimez les images et créez une fiche d'analyse pour accompagner les élèves.",
+                        "L'ensemble doit être cohérent avec le scénario."
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "h2",
+            "id": "exemple-prompt",
+            "text": "Exemple de prompt"
+        },
+        {
+            "type": "p",
+            "text": "Utilisez des consignes simples pour guider l'outil d'IA."
+        },
+        {
+            "type": "copyBox",
+            "text": "Remplacer la personne présente sur l'image par un élève, conserver la perspective et l'éclairage, ajouter une incohérence légère dans les proportions des mains, garder un rendu réaliste."
+        },
+        {
+            "type": "alertInfo",
+            "text": "Une image trop parfaite est difficile à exploiter. Les erreurs doivent être visibles après observation."
+        },
+        {
+            "type": "alertError",
+            "text": "Évitez les modifications trop évidentes. Si l'erreur est immédiate, l'intérêt pédagogique disparaît."
+        },
+        {
+            "type": "h2",
+            "id": "adapter-besoins",
+            "text": "Adapter selon vos besoins"
+        },
+        {
+            "type": "p",
+            "text": "Cette méthode peut être ajustée en fonction :"
+        },
+        {
+            "type": "ul",
+            "items": [
+                "du niveau des élèves",
+                "du temps disponible",
+                "du matériel utilisé"
+            ]
+        },
+        {
+            "type": "p",
+            "text": "L'essentiel est de conserver une logique : proposer des images crédibles mais <strong>questionnables</strong>."
+        },
+        {
+            "type": "pageNav",
+            "prev": {
+                "href": "debrief.html",
+                "label": "Débrief de VR-AI"
+            },
+            "next": {
+                "href": "adapter.html",
+                "label": "Adapter l'atelier VR-AI"
+            }
+        }
+    ]
+}

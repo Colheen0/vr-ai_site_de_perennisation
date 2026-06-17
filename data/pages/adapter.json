@@ -1,0 +1,121 @@
+{
+    "title": "Adapter l'atelier VR-AI",
+    "toc": [
+        {
+            "href": "#ressources",
+            "label": "Ressources disponibles"
+        },
+        {
+            "href": "#evolutive",
+            "label": "Une documentation évolutive"
+        },
+        {
+            "href": "#logique",
+            "label": "Conserver la logique du projet"
+        }
+    ],
+    "content": [
+        {
+            "type": "h1",
+            "id": "titre",
+            "text": "Adapter l'atelier VR-AI"
+        },
+        {
+            "type": "p",
+            "text": "Cette section regroupe différents documents liés à la conception et à la mise en place de l'atelier."
+        },
+        {
+            "type": "p",
+            "text": "Ces ressources permettent de mieux comprendre la démarche du projet, son évolution et les choix réalisés pendant sa création."
+        },
+        {
+            "type": "h2",
+            "id": "ressources",
+            "text": "Ressources disponibles"
+        },
+        {
+            "type": "cardContainer",
+            "cards": [
+                {
+                    "title": "Note de recherche",
+                    "icon": "doc",
+                    "content": "Synthèse des recherches sur l'IA, les images générées et l'esprit critique.",
+                    "link": {
+                        "href": "../../assets/docs/note-recherche.pdf",
+                        "label": "Consulter le document"
+                    }
+                },
+                {
+                    "title": "Scénario complet",
+                    "icon": "doc",
+                    "content": "Version détaillée du scénario utilisé pendant l'atelier.",
+                    "link": {
+                        "href": "../../assets/docs/scenario-complet.pdf",
+                        "label": "Ouvrir le scénario"
+                    }
+                },
+                {
+                    "title": "Supports pédagogiques",
+                    "icon": "doc",
+                    "content": "Documents utilisés pour préparer et structurer l'atelier.",
+                    "link": {
+                        "href": "../../assets/docs/supports-pedagogiques.zip",
+                        "label": "Explorer les supports"
+                    }
+                },
+                {
+                    "title": "Retour d'expérience",
+                    "icon": "doc",
+                    "content": "Analyse du déroulement de l'atelier, des réactions observées et des pistes d'amélioration.",
+                    "link": {
+                        "href": "../../assets/docs/retour-experience.pdf",
+                        "label": "Lire le retour d'expérience"
+                    }
+                },
+                {
+                    "title": "Documents de production",
+                    "icon": "doc",
+                    "content": "Conception du projet : organisation, préparation et suivi.",
+                    "link": {
+                        "href": "../../assets/docs/documents-production.zip",
+                        "label": "Voir les documents"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "h2",
+            "id": "evolutive",
+            "text": "Une documentation évolutive"
+        },
+        {
+            "type": "p",
+            "text": "L'atelier Alibi a été conçu comme un projet réutilisable et adaptable. Cette documentation peut évoluer dans le temps, être enrichie ou modifiée selon les retours et les nouvelles expérimentations réalisées autour de l'atelier."
+        },
+        {
+            "type": "alertInfo",
+            "text": "Les documents peuvent être réutilisés, adaptés ou complétés selon vos besoins pédagogiques."
+        },
+        {
+            "type": "h2",
+            "id": "logique",
+            "text": "Conserver la logique du projet"
+        },
+        {
+            "type": "p",
+            "text": "Même si les supports peuvent évoluer, l'objectif reste le même : développer l'esprit critique des élèves face aux images et aux contenus numériques."
+        },
+        {
+            "type": "p",
+            "text": "L'ensemble des ressources présentes sur ce site a été pensé pour faciliter cette transmission."
+        },
+        {
+            "type": "pageNav",
+            "prev": {
+                "href": "kit-telechargeable.html",
+                "label": "Kit téléchargeable"
+            },
+            "next": null
+        }
+    ]
+}

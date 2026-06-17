@@ -1,0 +1,58 @@
+@import "variable.css";
+
+.summary-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 0.0625rem solid var(--border-default); 
+}
+
+.summary {
+    border-bottom: 0.0625rem solid var(--border-default);
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+<<<<<<< HEAD
+=======
+.summary[open] {
+    background-color: var(--bg-subtle);
+}
+
+>>>>>>> 3be81208097a266714c635d29240c7c4b314cab2
+.summary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-4) var(--spacing-2);
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-primary);
+    list-style: none; 
+}
+
+.summary-header::-webkit-details-marker {
+    display: none; 
+}
+
+.summary-icon {
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.summary[open] .summary-icon {
+<<<<<<< HEAD
+    transform: rotate(90deg);
+=======
+    transform: rotate(180deg);
+>>>>>>> 3be81208097a266714c635d29240c7c4b314cab2
+}
+
+.summary-body {
+    padding: 0 var(--spacing-2) var(--spacing-4) var(--spacing-2);
+    color: var(--text-secondary);
+}
+
+.summary-body p:last-child {
+    margin-bottom: 0;
+}
